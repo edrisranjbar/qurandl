@@ -1,14 +1,12 @@
 # Quran Download
+  <a href="https://github.com/edrisranjbar/qurandl">
+    <img src="http://qurandl.com/wp-content/uploads/2023/03/qurandl.png" alt="Logo" width="200px">
+  </a>
 Welcome to Quran Download, an open-source project built with Laravel that aims to make Quran recitations accessible for everyone.
 this project is fully opensource and none-profit and it's being maintained and managed by [Itadbeer](!https://itadbeer.com) developer team for **Sahahbahq**.
 
 <p align="center">
-  <a href="https://github.com/edrisranjbar/qurandl">
-    <img src="http://qurandl.com/wp-content/uploads/2023/03/qurandl.png" alt="Logo" width="200px">
-  </a>
-
   <h3 align="center">Access Quran recitations from everywhere with a click!</h3>
-
   <p align="center">
     The best specialized Quran recitation platform
     <br/>
@@ -30,7 +28,7 @@ this project is fully opensource and none-profit and it's being maintained and m
 
 ![Screen Shot](images/screenshot.png)
 
-![Quran Download](https://qurandl.com) is an online website that allows users to download and listen to Quran recitations. The website offers a wide range of recitations from different reciters. Users can search for recitations by surah or reciter.
+[Quran Download](https://qurandl.com) is an online website that allows users to download and listen to Quran recitations. The website offers a wide range of recitations from different reciters. Users can search for recitations by surah or reciter.
 The project is built with Laravel, a PHP web application framework. Laravel provides a robust and secure foundation for the website, making it easy to maintain and scale.
 
 ## Getting Started
@@ -40,10 +38,12 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 In order to run this project locally; you need to have `php` and `composer` installed.
 
-0. Create your own fork
-1. Download or clone the repository using: `git clone git@github.com:edrisranjbar/qurandl.git`
-2. ...
-3. ...
+To run Quran Download locally, you need to have PHP and Composer installed on your machine. Follow these steps to get started:
+
+1. Clone the repository to your local machine: `git clone https://github.com/edrisranjbar/qurandl.git`
+2. Navigate to the project directory: `cd qurandl`
+3. Install the dependencies using Composer: `composer install`
+4. Create a new `.env` file: `cp .env.example
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -60,9 +60,4 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 ## License
-
 Distributed under the MIT License. See [LICENSE](https://github.com/edrisranjbar/qurandl/blob/main/LICENSE.md) for more information.
-
-## Authors
-
-* **Edris Ranjbar** - *Back-end web developer* - [Edris Ranjbar](https://github.com/edrisranjbar) - *Back-end dev.*

@@ -2,9 +2,10 @@
   <a href="https://github.com/edrisranjbar/qurandl">
     <img src="http://qurandl.com/wp-content/uploads/2023/03/qurandl.png" alt="Logo" width="200px" align="center">
   </a>
+<p>
 Welcome to Quran Download, an open-source project built with Laravel that aims to make Quran recitations accessible for everyone.
 this project is fully opensource and none-profit and it's being maintained and managed by [Itadbeer](!https://itadbeer.com) developer team for **Sahahbahq**.
-
+</p>
 <p align="center">
   <h3 align="center">Access Quran recitations from everywhere with a click!</h3>
   <p align="center">

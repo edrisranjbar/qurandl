@@ -4,7 +4,7 @@ this project is fully opensource and none-profit and it's being maintained and m
 
 <p align="center">
   <a href="https://github.com/edrisranjbar/qurandl">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="http://qurandl.com/wp-content/uploads/2023/03/qurandl-200x171.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Access Quran recitations from everywhere with a click!</h3>

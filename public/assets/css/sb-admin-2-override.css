@@ -1,0 +1,120 @@
+.sidebar .nav-item .nav-link span {
+    font-size: 0.8rem;
+}
+
+.sidebar .nav-item .collapse {
+    right: calc(6.5rem + 1.5rem / 2);
+}
+
+.sidebar .nav-item .collapse-inner {
+    background-color: #4e73df;
+}
+
+@media (min-width: 576px) {
+
+    .topbar .dropdown .dropdown-menu {
+        width: auto;
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .sidebar .nav-item .collapse {
+        right: 0;
+    }
+
+    .sidebar .nav-item .collapse-inner {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .sidebar .nav-item .collapse,
+    .sidebar .nav-item .collapsing {
+        margin: 0;
+    }
+
+    .sidebar .nav-item .collapse .collapse-inner,
+    .sidebar .nav-item .collapsing .collapse-inner {
+        padding: 0;
+    }
+
+    .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+        float: left;
+    }
+
+    .sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
+        content: '\f104';
+    }
+
+    .sidebar .nav-item .nav-link {
+        text-align: right;
+    }
+
+    .sidebar .nav-item .nav-link span {
+        font-size: 1rem;
+    }
+
+    .sidebar .nav-item .nav-link i {
+        margin-right: 0;
+        margin-left: 0.25rem;
+    }
+
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item,
+    .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+        padding: 0.75rem 2.5rem;
+    }
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+    color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link:active,
+.sidebar-dark .nav-item .nav-link:focus,
+.sidebar-dark .nav-item .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.sidebar-dark .nav-item .nav-link[data-toggle="collapse"]::after {
+    color: #fff;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item,
+.sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+    margin: 0;
+    color: #fff;
+    border-radius: 0;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
+.sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+#userDropdown {
+    height: 2.875rem;
+}
+
+#userDropdown:hover,
+#userDropdown:active,
+#userDropdown:focus {
+    background-color: #eaecf4;
+}
+
+#userDropdown::after {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0.4em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    color: #858796;
+}

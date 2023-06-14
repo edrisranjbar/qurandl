@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مدیریت قران دانلود</title>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link href="assets/fonts/fontawesome-6.2.1/css/all.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="assets/css/sb-admin-2-override.css" rel="stylesheet">
+</head>
+
+<body id="page-top" dir="rtl">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="m-0 p-0 navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-right"
+            id="accordionSidebar">
+            <li>
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+                    <div class="sidebar-brand-text mx-3">
+                        قران دانلود
+                    </div>
+                </a>
+            </li>
+            <li>
+                <hr class="sidebar-divider my-0">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>داشبورد</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                    aria-expanded="false" aria-controls="collapseUsers">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>اعضا</span>
+                </a>
+                <div id="collapseUsers" class="collapse" aria-labelledby="collapseUsers"
+                    data-parent="#accordionSidebar">
+                    <div class="collapse-inner">
+                        <a class="collapse-item" href="">
+                            <span>لیست اعضا</span>
+                        </a>
+                        <a class="collapse-item" href="">
+                            <span>واریزی اعضا</span>
+                        </a>
+                        <a class="collapse-item" href="">
+                            <span>برداشت اعضا</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-list-alt"></i>
+                    <span>نرخ حق عضویت</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>تنظیمات</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn d-md-none btn-circle">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ml-2 border rounded" href="#" id="userDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user fa-sm fa-fw text-gray-600"></i>
+                                <span class="mr-2 d-none d-lg-inline text-dark">مدیر صندوق</span>
+                            </a>
+                            <div class="dropdown-menu shadow animated--grow-in text-right"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="">
+                                    <i class="fas fa-user fa-sm fa-fw ml-2 text-gray-600"></i>
+                                    حساب کاربری
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw ml-2 text-gray-600"></i>
+                                    خروج
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Begin Page Content -->
+            <div class="container-fluid text-right">
+                <div class='alert alert-info my-2' id='diff_message'>
+                    موجودی صندوق
+                    <span class='money'>
+                        ۱۲۹
+                    </span> تومان
+                    <strong>بیشتر است</strong>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h6 class="font-weight-bold text-primary mb-2">تعداد کل هزینه ها</h6>
+                                        <div class="h6 ml-3 mb-0 text-gray-800">
+                                            ۱۲۳۲
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-money-check fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h6 class="font-weight-bold text-success mb-2">موجودی کل صندوق</h6>
+                                        <div class="ml-3 h6 mb-0 text-gray-800">
+                                            <span class="money">۳۴۵۶۷۸</span>
+                                            تومان
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-cash-register fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h6 class="font-weight-bold text-info mb-2">تعداد کل اعضاء</h6>
+                                        <div class="h6 ml-3 mb-0 text-gray-800">۴۵</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <h6 class="font-weight-bold text-warning mb-2">وام های جاری</h6>
+                                        <div class="h6 mb-0 ml-3 text-gray-800">
+                                            ۳۴۵۶۷۸۰۰۰
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-university fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <!-- Content Column -->
+                    <div class="col-lg-6 mb-4">
+
+                        <!-- Project Card Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">یادآوری های امروز</h6>
+                            </div>
+                            <div class="card-body">
+                                <strong class="text-warning mb-2"> سر رسید چک های دریافتی: </strong>
+                                <br>
+                                @forelse($received_cheques as $cheque)
+                                @if($cheque->serial_number)
+                                <strong>شماره سریال چک:</strong> {{$cheque->serial_number}}
+                                <br>
+                                @endif
+                                <strong>مبلغ:</strong> <span class="money">{{$cheque->amount}}</span>
+                                <br>
+                                @empty
+                                چکی برای نمایش وجود ندارد
+                                <br>
+                                @endforelse
+                                <hr>
+                                <strong class="text-warning mb-2"> سر رسید چک های صادر شده: </strong>
+                                <br>
+                                @forelse($issued_cheques as $cheque)
+                                @if($cheque->serial_number)
+                                <strong>شماره سریال چک:</strong> {{$cheque->serial_number}}
+                                <br>
+                                @endif
+                                <strong>مبلغ:</strong> <span class="money">{{$cheque->amount}}</span>
+                                <br>
+                                @empty
+                                چکی برای نمایش وجود ندارد
+                                <br>
+                                @endforelse
+                                <hr>
+                                <strong class="text-warning mb-2"> سر رسید بازپرداخت کمک های دریافتی: </strong>
+                                <br>
+                                @forelse($donations_pay_bak_for_today as $donation_installment)
+                                مبلغ: {{$donation_installment->amount}}
+                                <br>
+                                <a class='btn btn-sm mt-2 btn btn-outline-primary'
+                                    href='{{ url("donations/" . $donation_installment->donation_id) }}'>بازپرداخت</a>
+                                <br>
+                                @empty
+                                قسطی برای نمایش وجود ندارد
+                                @endforelse
+                            </div>
+                            <div class="d-block ml-auto mr-3 mb-3">
+                                <a href="{{url('admin/reminder/installments')}}"
+                                    class="float-left ml-2 mt-2 btn btn-sm btn-outline-primary">
+                                    یادآوری اقساط پرداخت نشده
+                                </a>
+                                <a href="{{url('admin/reminder/membership')}}"
+                                    class="float-left ml-2 mt-2 btn btn-sm btn-outline-primary">
+                                    یادآوری حق عضویت های پرداخت نشده
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+
+                        <!-- Illustrations -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">آخرین واریزی ها</h6>
+                            </div>
+                            <div class="card-body">
+                                @if(count($payments) > 0)
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ردیف</th>
+                                            <th>واریز کننده</th>
+                                            <th>مبلغ</th>
+                                            <th>تاریخ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($payments as $payment)
+                                        <tr>
+                                            <td>{{$loop->iteration}}</td>
+                                            <td>{{ $payment->user?->fullName ?? $payment->user_name }}</td>
+                                            <td class="money">{{$payment->amount}}</td>
+                                            <td class="date">{{$payment->date}}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                                @else
+                                <img src="images/empty.svg" class="w-50 d-block mx-auto">
+                                <p class="text-center"> نتیجه ای یافت نشد</p>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">آخرین برداشت ها</h6>
+                            </div>
+                            <div class="card-body">
+                                @if(count($withdrawals) > 0)
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ردیف</th>
+                                            <th>برداشت کننده</th>
+                                            <th>مبلغ</th>
+                                            <th>تاریخ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>ادریس رنجبر</td>
+                                            <td class="money">{{$withdrawal->amount}}</td>
+                                            <td class="date">{{$withdrawal->date}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="text-center">نتیجه ای یافت نشد</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center text-muted my-auto">
+                        <span>
+                            برنامه نویس:
+                            <a href="https://edrisranjbar.ir" target="_blank">
+                                <strong>ادریس رنجبر</strong>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- End of Page Wrapper -->
+        <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.easing.min.js')}}"></script>
+        <script src="{{ asset('assets/js/sb-admin-2.js') }}"></script>
+</body>
+
+</html>

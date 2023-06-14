@@ -21,8 +21,8 @@
                             <form class="user" name="login-form" method="post" action="{{ url('admin/login') }}">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control form-control-user"
-                                        placeholder="نشانی ایمیل" value="{{ old('email') }}">
+                                    <input name="username" class="form-control form-control-user"
+                                        value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" minlength="3"

@@ -118,3 +118,12 @@
     border-left: 0.3em solid transparent;
     color: #858796;
 }
+
+footer.sticky-footer {
+    position: sticky;
+}
+
+#wrapper #content-wrapper {
+    position: relative;
+    min-height: 100vh;
+}

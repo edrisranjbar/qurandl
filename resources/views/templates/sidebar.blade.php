@@ -6,7 +6,7 @@
     <li>
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('admin//') }}">
             <div class="sidebar-brand-text mx-3">
-                {{ $title ?? 'صندوق تعاونی' }}
+                {{ $title ?? 'قرآن دانلود' }}
             </div>
         </a>
     </li>

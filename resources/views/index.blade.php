@@ -83,11 +83,26 @@
                         <h6 class="m-0 font-weight-bold text-primary">محبوب ترین ها</h6>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">mishary rashid al affasy</li>
-                            <li class="list-group-item">saad al-ghamidi</li>
-                            <li class="list-group-item">al-hussary</li>
-                        </ul>
+                        <table class="table table-striped">
+                            <thead class="">
+                                <th scope="col">رتبه</th>
+                                <th scope="col">نام قاری</th>
+                                <th scope="col">تعداد بازدید ها</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>mishary</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>rashid</td>
+                                    <td>200</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

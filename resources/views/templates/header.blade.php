@@ -16,6 +16,7 @@
 <body id="page-top" dir="rtl">
     <!-- Page Wrapper -->
     <div id="wrapper">
+        @include('templates.sidebar')
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->

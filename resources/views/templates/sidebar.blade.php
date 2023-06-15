@@ -1,11 +1,12 @@
 <!-- Sidebar -->
-<ul class="m-0 p-0 navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-right" id="accordionSidebar">
+<ul class="m-0 p-0 navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-right rounded-top-right-1 rounded-bottom-right-1"
+    id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <li>
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('admin//') }}">
             <div class="sidebar-brand-text mx-3">
-                {{ $title ?? "صندوق تعاونی" }}
+                {{ $title ?? 'صندوق تعاونی' }}
             </div>
         </a>
     </li>

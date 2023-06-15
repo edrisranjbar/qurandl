@@ -127,3 +127,41 @@ footer.sticky-footer {
     position: relative;
     min-height: 100vh;
 }
+
+.rounded-top-left-1 {
+    border-top-left-radius: 1rem;
+}
+
+.rounded-top-right-1 {
+    border-top-right-radius: 1rem;
+}
+
+.rounded-bottom-left-1 {
+    border-bottom-left-radius: 1rem;
+}
+
+.rounded-bottom-right-1 {
+    border-bottom-right-radius: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+    .rounded-top-left-1 {
+        border-top-left-radius: 0rem;
+    }
+
+    .rounded-top-right-1 {
+        border-top-right-radius: 0rem;
+    }
+
+    .rounded-bottom-left-1 {
+        border-bottom-left-radius: 0rem;
+    }
+
+    .rounded-bottom-right-1 {
+        border-bottom-right-radius: 0rem;
+    }
+}
+
+#wrapper {
+    max-width: 2000px;
+}

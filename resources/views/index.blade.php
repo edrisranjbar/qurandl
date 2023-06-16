@@ -83,16 +83,31 @@
                         <h6 class="m-0 font-weight-bold text-primary">محبوب ترین ها</h6>
                     </div>
                     <div class="card-body">
-                        <table class="table table-striped">
-                            <thead class="">
+                        <table class="table table-bordered table-striped shadow-sm" id="reciter-leaderbord">
+                            <thead class="table-primary">
                                 <th scope="col">رتبه</th>
                                 <th scope="col">نام قاری</th>
                                 <th scope="col">تعداد بازدید ها</th>
                             </thead>
-                            <tbody>
+                            <tbody class="table-group-divider">
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>mishary</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>rashid</td>
+                                    <td>20fds0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>rashid</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>rashid</td>
                                     <td>200</td>
                                 </tr>
                                 <tr>

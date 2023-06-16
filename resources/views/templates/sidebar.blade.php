@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<ul class="m-0 p-0 navbar-nav bg-gradient-primary sidebar sidebar-dark accordion text-right rounded-top-right-1 rounded-bottom-right-1"
+<ul class="m-0 p-0 navbar-nav bg-gradient-dark sidebar sidebar-dark accordion text-right rounded-top-right-1 rounded-bottom-right-1"
     id="accordionSidebar">
 
     <!-- Sidebar - Brand -->

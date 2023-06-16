@@ -80,39 +80,49 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">محبوب ترین ها</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">محبوب ترین ها</h6>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered table-striped shadow-sm" id="reciter-leaderbord">
-                            <thead class="table-primary">
-                                <th scope="col">رتبه</th>
-                                <th scope="col">نام قاری</th>
-                                <th scope="col">تعداد بازدید ها</th>
+                        <table class="table table-bordered table-striped" id="reciter-leaderbord">
+                            <thead class="table-dark">
+                                <th class="text-center" scope="col">رتبه</th>
+                                <th scope="col" class="text-center">نام قاری</th>
+                                <th scope="col" class="text-center">تعداد بازدید ها</th>
                             </thead>
-                            <tbody class="table-group-divider">
+                            <tbody>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>mishary</td>
+                                    <th scope="row" class="text-center">1</th>
+                                    <td>
+                                        <a href="">مشاری راشد العفاسی</a>
+                                    </td>
                                     <td>200</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>rashid</td>
-                                    <td>20fds0</td>
+                                    <th scope="row" class="text-center">2</th>
+                                    <td>
+                                        <a href="">عبدالستار سماک</a>
+                                    </td>
+                                    <td>150</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>rashid</td>
+                                    <th scope="row" class="text-center">3</th>
+                                    <td>
+                                        <a href="">رعد الکردی</a>
+                                    </td>
                                     <td>200</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>rashid</td>
+                                    <th scope="row" class="text-center">4</th>
+                                    <td>
+                                        <a href="">محمود خلیل الحصری</a>
+                                    </td>
                                     <td>200</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>rashid</td>
+                                    <th scope="row" class="text-center">5</th>
+                                    <td>
+                                        <a href="">عبدالباسط عبدالصمد</a>
+                                    </td>
                                     <td>200</td>
                                 </tr>
 
@@ -125,9 +135,10 @@
             <div class="col-lg-6 mb-4">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">آمار بازدید ها</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">آمار بازدید ها</h6>
                     </div>
                     <div class="card-body py-5">
+                        <canvas id="myChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -135,3 +146,5 @@
 
     </div>
 @stop
+<script src="{{ asset('assets/js/chart.js') }}"></script>
+<script defer src="{{ asset('assets/js/chart-line.js') }}"></script>

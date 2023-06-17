@@ -15,7 +15,7 @@
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa fa-microphone fa-2x text-gray-300"></i>
+                                <i class="fas fa fa-users fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                 <div class="h6 ml-3 mb-0 text-gray-800"></div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-users fa-2x text-gray-300"></i>
+                                <i class="fas fa-eye fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>

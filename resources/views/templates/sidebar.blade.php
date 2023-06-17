@@ -27,8 +27,8 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
             aria-expanded="false" aria-controls="collapseUsers">
-            <i class="fas fa-fw fa-user"></i>
-            <span>اعضا</span>
+            <i class="fas fa-fw fa-users"></i>
+            <span>قاری ها</span>
         </a>
         <div id="collapseUsers" class="collapse" aria-labelledby="collapseUsers" data-parent="#accordionSidebar">
             <div class="collapse-inner">
@@ -46,18 +46,10 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('admin/membershipFees/') }}">
-            <i class="fas fa-fw fa-list-alt"></i>
-            <span>نرخ حق عضویت</span>
-        </a>
-    </li>
-
-
-    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLoan"
             aria-expanded="false" aria-controls="collapseLoan">
-            <i class="fas fa-fw fa-archive"></i>
-            <span>وام‌ها</span>
+            <i class="fas fa-fw fa-microphone"></i>
+            <span>تلاوات خاشعه</span>
         </a>
         <div id="collapseLoan" class="collapse" aria-labelledby="collapseLoan" data-parent="#accordionSidebar">
             <div class="collapse-inner">
@@ -65,13 +57,6 @@
                 <a class="collapse-item" href="{{ url('admin/loanTurns/') }}">نوبت‌های وام</a>
             </div>
         </div>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('admin/expenses/') }}">
-            <i class="fas fa-fw fa-money-check"></i>
-            <span>هزینه‌ها</span>
-        </a>
     </li>
 
     <li class="nav-item">
@@ -87,21 +72,6 @@
             <span>گزارش‌ها</span>
         </a>
     </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="{{ url('admin/scores/') }}">
-            <i class="fas fa-fw fa-plus"></i>
-            <span>سیستم امتیازدهی</span>
-        </a>
-    </li>
-
-    <li class="nav-item ">
-        <a class="nav-link" href="{{ url('admin/banks/') }}">
-            <i class="fas fa-fw fa-university"></i>
-            <span>بانک‌ها</span>
-        </a>
-    </li>
-
 
     <li class="nav-item ">
         <a class="nav-link" href="{{ url('admin/comments') }}">

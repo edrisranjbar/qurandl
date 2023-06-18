@@ -165,3 +165,17 @@ footer.sticky-footer {
 #wrapper {
     max-width: 2000px;
 }
+
+.sidebar .nav-item.dropdown .dropdown-toggle::after,
+.topbar .nav-item.dropdown .dropdown-toggle::after {
+    content: '\f104';
+    float: left;
+    transition: 0.2s ease;
+}
+
+.sidebar .nav-item.dropdown .dropdown-toggle[aria-expanded=true]::after,
+.topbar .nav-item.dropdown .dropdown-toggle[aria-expanded=true]::after {
+    float: left;
+    transition: 0.2s ease;
+    transform: rotate(-90deg);
+}

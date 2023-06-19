@@ -179,3 +179,7 @@ footer.sticky-footer {
     transition: 0.2s ease;
     transform: rotate(-90deg);
 }
+
+.custom-table-hover tr:hover {
+    background-color: rgb(227, 230, 240);
+}

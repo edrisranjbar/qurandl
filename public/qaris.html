@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>مدیریت - داشبود</title>
-    <script src="http://127.0.0.1:5500/public/assets/js/jquery.min.js"></script>
+
     <link href="http://127.0.0.1:5500/public/assets/fonts/fontawesome-6.2.1/css/all.css" rel="stylesheet"
         type="text/css">
     <link href="http://127.0.0.1:5500/public/assets/css/fonts.css" rel="stylesheet" type="text/css">
     <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2.css" rel="stylesheet">
     <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2-override.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top" dir="rtl">
@@ -162,7 +163,10 @@
                     </nav>
                     <!-- Begin Page Content -->
                     <div class="container-fluid text-right">
-                        <table class="table table-bordered" id="qaris-table">
+
+                        <button type="button" class="btn btn-outline-dark btn-md mb-2">+ افزودن
+                            قاری</button>
+                        <table class="table table-bordered" id="qarisTable" data-count="2">
                             <thead class="table-dark">
                                 <th class="text-center">ردیف</th>
                                 <th class="text-center">نام قاری</th>
@@ -181,7 +185,7 @@
                                             data-bs-target="#deleteModal">
                                         </i>
 
-                                        <i class="fa fa-pen">
+                                        <i class="fa fa-edit">
                                         </i>
                                     </td>
                                 </tr>
@@ -242,32 +246,36 @@
             </div>
             <!-- End of Page Wrapper -->
         </div>
-
-        <script src="http://127.0.0.1:5500/public/assets/js/jquery.easing.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/script.js"></script>      
         <script src="http://127.0.0.1:5500/public/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/jquery.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/jquery.easing.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/simple-datatables.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/data-table-qaris.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/sb-admin-2.js"></script>
-        <div class="modal fade" id="deleteModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">حذف قاری
-                    </h5>
-                    <a type="button" class="fa fa-times text-secondary mt-2"
-                        aria-label="Close" data-bs-dismiss="modal"></a>
-                </div>
-                <div class="modal-body text-right">مطمئنید می&zwnj;خواهید قاری مورد
-                    نظر حذف
-                    شود؟</div>
-                <div class="modal-footer justify-content-start">
-                    <a type=" button" class="btn btn-danger">بله، حذف کن</a>
-                    <button type="button" class="btn btn-light"
-                        data-bs-dismiss="modal">خیر، منصرف شدم</button>
 
+
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">حذف قاری
+                        </h5>
+                        <a type="button" class="fa fa-times text-secondary mt-2" aria-label="Close"
+                            data-bs-dismiss="modal"></a>
+                    </div>
+                    <div class="modal-body text-right">مطمئنید می&zwnj;خواهید قاری مورد
+                        نظر حذف
+                        شود؟</div>
+                    <div class="modal-footer justify-content-start">
+                        <a type=" button" class="btn btn-danger">بله، حذف کن</a>
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">خیر، منصرف شدم</button>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
+
 </html>

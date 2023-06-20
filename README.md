@@ -44,7 +44,10 @@ To run Quran Download locally, you need to have PHP and Composer installed on yo
 1. Clone the repository to your local machine: `git clone https://github.com/edrisranjbar/qurandl.git`
 2. Navigate to the project directory: `cd qurandl`
 3. Install the dependencies using Composer: `composer install`
-4. Create a new `.env` file: `cp .env.example
+4. Create a new `.env` file by copying `.env.example` file with the following command.
+* In Linux : `cp .env.example .env`
+* In windows : `COPY .env.example .env`
+   
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.

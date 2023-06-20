@@ -21,7 +21,7 @@ class AdminAuthController extends Controller
     public function login(): View|RedirectResponse
     {
         if (Auth::guard('admin')->check()) {
-            return redirect('/');
+            return redirect('/admin');
         }
         return view('admin.login');
     }
@@ -33,7 +33,7 @@ class AdminAuthController extends Controller
             'password' => ['required'],
         ]);
         if (Auth::guard('admin')->attempt($credentials, true)) {
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
         }
         return redirect()->route('admin.login')->with('error', 'نام کاربری یا رمز عبور اشتباه است!');
     }

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مدیریت - داشبود</title>
+
+    <link href="http://127.0.0.1:5500/public/assets/fonts/fontawesome-6.2.1/css/all.css" rel="stylesheet"
+        type="text/css">
+    <link href="http://127.0.0.1:5500/public/assets/css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2-override.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" dir="rtl">
+    <!-- Page Wrapper -->
+
+    <div class="row justify-content-center my-md-5 mx-0">
+        <div id="wrapper"
+            class="col-md-11 px-0 shadow rounded-top-right-1 rounded-bottom-right-1 rounded-bottom-left-1">
+            <!-- Sidebar -->
+            <ul class="m-0 p-0 navbar-nav bg-gradient-dark sidebar sidebar-dark accordion text-right rounded-top-right-1 rounded-bottom-right-1"
+                id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <li>
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                        href="http://127.0.0.1:8000/admin">
+                        <div class="sidebar-brand-text mx-3">
+                            قرآن دانلود
+                        </div>
+                    </a>
+                </li>
+
+                <!-- Divider -->
+                <li>
+                    <hr class="sidebar-divider my-0">
+                </li>
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>داشبورد</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers">
+                        <i class="fas fa-fw fa-users"></i>
+                        <span>قاری ها</span>
+                    </a>
+                    <div id="collapseUsers" class="collapse" aria-labelledby="collapseUsers"
+                        data-parent="#accordionSidebar">
+                        <div class="collapse-inner">
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/users">
+                                <span>لیست قاری ها</span>
+                            </a>
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/payments">
+                                <span>افزودن قاری</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseLoan" aria-expanded="false" aria-controls="collapseLoan">
+                        <i class="fas fa-fw fa-microphone"></i>
+                        <span>تلاوات خاشعه</span>
+                    </a>
+                    <div id="collapseLoan" class="collapse" aria-labelledby="collapseLoan"
+                        data-parent="#accordionSidebar">
+                        <div class="collapse-inner">
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/loans">لیست تلاوت ها</a>
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/loanTurns">افزودن تلاوت</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin/donations">
+                        <i class="fas fa-fw fa-donate"></i>
+                        <span>کمک‌های دریافتی</span>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin/reports">
+                        <i class="fas fa-fw fa-file-alt"></i>
+                        <span>گزارش‌ها</span>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin/comments">
+                        <i class="fas fa-fw fa-comments"></i>
+                        <span>نظرات و پیشنهادها</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
+                        <i class="fas fa-fw fa-tools"></i>
+                        <span>ابزارها</span>
+                    </a>
+                    <div id="collapseTools" class="collapse" aria-labelledby="collapseTools"
+                        data-parent="#accordionSidebar">
+                        <div class="collapse-inner">
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/notes">یادداشت‌ها</a>
+                            <a class="collapse-item" href="http://127.0.0.1:8000/admin/backups">پشتیبان‌گیری</a>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin/settings">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- End of Sidebar -->
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column rounded-bottom-left-1">
+                <!-- Main Content -->
+                <div id="content">
+                    <nav
+                        class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow rounded-top-left-1">
+                        <button id="sidebarToggleTop" class="btn d-md-none btn-circle">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle ml-2 border rounded" href="#" id="userDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user fa-sm fa-fw text-gray-600"></i>
+                                    <span class="mr-2 d-none d-lg-inline text-dark">مدیر صندوق</span>
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu shadow animated--grow-in text-right"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="http://127.0.0.1:8000/admin/profile">
+                                        <i class="fas fa-user fa-sm fa-fw ml-2 text-gray-600"></i>
+                                        حساب کاربری
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="http://127.0.0.1:8000/admin/logout">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw ml-2 text-gray-600"></i>
+                                        خروج
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Begin Page Content -->
+                    <form class="d-flex flex-column container-fluid">
+                        <label for="#qari-name-input" class="text-right mb-3 float-right">
+                            نام قاری
+                            <input id="qari-name-input" type="text"
+                                class="form-control col-sm-12 col-md-5 col-lg-4 col-xl-3 col-xxl-3" required>
+                        </label>
+                        <label for="#qari-discription" class="text-right">
+                            توضیحات
+                            <textarea name="qari-discription" id="qari-discription" cols="30" rows="10"
+                                class="form-control"></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-dark mt-3">ثبت</button>
+                    </form>
+                </div>
+                <!-- End of Content Wrapper -->
+                <footer class="sticky-footer bg-white rounded-bottom-left-1">
+                    <div class="container my-auto">
+                        <div class="copyright text-center text-muted my-auto">
+                            <span>
+                                طراحی و توسعه توسط &nbsp;
+                                <a href="https://www.itadbeer.com/" target="_blank">
+                                    <strong>آی‌تدبیر</strong>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- End of Page Wrapper -->
+        </div>
+        <script src="http://127.0.0.1:5500/public/assets/js/script.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/jquery.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/jquery.easing.min.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/simple-datatables.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/data-table-qaris.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/sb-admin-2.js"></script>
+        <script src="http://127.0.0.1:5500/public/assets/js/createqari.js"></script>
+</body>
+
+</html>

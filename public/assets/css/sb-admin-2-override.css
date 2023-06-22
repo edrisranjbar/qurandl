@@ -460,5 +460,5 @@ table.datatable-table:focus {
 }
 
 button[type="submit"] {
-    width: 100px;
+    width: fit-content;
 }

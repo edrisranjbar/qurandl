@@ -126,15 +126,15 @@
                         <span>تنظیمات</span>
                     </a>
                 </li>
-
             </ul>
             <!-- End of Sidebar -->
+
+
             <!-- Content Wrapper -->
             <div id="content-wrapper" class="d-flex flex-column rounded-bottom-left-1">
                 <!-- Main Content -->
                 <div id="content">
-                    <nav
-                        class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow rounded-top-left-1">
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow rounded-top-left-1">
                         <button id="sidebarToggleTop" class="btn d-md-none btn-circle">
                             <i class="fa fa-bars"></i>
                         </button>
@@ -162,19 +162,44 @@
                         </ul>
                     </nav>
                     <!-- Begin Page Content -->
-                    <form class="d-flex flex-column container-fluid">
-                        <label for="#qari-name-input" class="text-right mb-3 float-right">
-                            نام قاری
-                            <input id="qari-name-input" type="text"
-                                class="form-control col-sm-12 col-md-5 col-lg-4 col-xl-3 col-xxl-3" required>
-                        </label>
-                        <label for="#qari-discription" class="text-right">
-                            توضیحات
+                    <form class="d-flex flex-row">
+                        <div class="d-flex flex-column col-8 mt-4">
+                            <label for="qari-name-input" class="text-right mb-2">
+                                نام قاری
+                            </label>
+                            <input id="qari-name-input" type="text" class="form-control mb-3" required>
+
+                            <label for="qari-discription" class="text-right mb-2">
+                                توضیحات
+                            </label>
                             <textarea name="qari-discription" id="qari-discription" cols="30" rows="10"
                                 class="form-control"></textarea>
-                        </label>
-                        <button type="submit" class="btn btn-dark mt-3">ثبت</button>
+
+                            <button type="submit" class="btn btn-dark mt-3 btn-w-icon">
+                                <i class="fa fa-check ml-1"></i>
+                                ثبت</button>
+                        </div>
+                        <nav class="m-0 p-0 navbar-nav  sidebar sidebar-light accordion text-right col-4 border border-dark container-fluid"
+                            id="createqari-sidebar">
+                            <label for="status">وضعیت</label>
+                            <select class="form-control mb-4" name="status" id="status">
+                                <option value="public">عمومی</option>
+                                <option value="private">خصوصی</option>
+                                <option value="draft">پیش نویس</option>
+                            </select>
+                            <label for="slug">شناسه یکتا</label>
+                            <input id="slug" type="text" class="form-control" maxlength="50">
+
+                            <label for="qiraat"></label>
+                            <div class="form-check-group">
+                                <label for="" class="form-check-lable form-check">
+                                    <input class="form-check" type="checkbox">
+                                </label>
+                            </div>
+
+                        </nav>
                     </form>
+
                 </div>
                 <!-- End of Content Wrapper -->
                 <footer class="sticky-footer bg-white rounded-bottom-left-1">
@@ -193,14 +218,13 @@
             </div>
             <!-- End of Page Wrapper -->
         </div>
+        <script src="http://127.0.0.1:5500/public/assets/js/createqari.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/script.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/bootstrap.bundle.min.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/jquery.min.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/jquery.easing.min.js"></script>
-        <script src="http://127.0.0.1:5500/public/assets/js/simple-datatables.js"></script>
-        <script src="http://127.0.0.1:5500/public/assets/js/data-table-qaris.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/sb-admin-2.js"></script>
-        <script src="http://127.0.0.1:5500/public/assets/js/createqari.js"></script>
+
 </body>
 
 </html>

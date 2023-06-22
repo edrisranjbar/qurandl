@@ -166,67 +166,314 @@
 
                         <button type="button" class="btn btn-outline-dark btn-md mb-2">+ افزودن
                             قاری</button>
-                        <table class="table table-bordered" id="qarisTable" data-count="2">
-                            <thead class="table-dark">
-                                <th class="text-center">ردیف</th>
-                                <th class="text-center">نام قاری</th>
-                                <th class="text-center">تعداد سوره ها</th>
-                                <th class="text-center">تعداد بازدید ها</th>
-                                <th class="text-center">عملیات</th>
-                            </thead>
-                            <tbody class="custom-table-hover">
-                                <tr>
-                                    <td class="text-center text-dark">1</td>
-                                    <td class="text-center text-dark">مشاری راشد العفاسی</td>
-                                    <td class="text-center text-dark">114</td>
-                                    <td class="text-center text-dark">1008</td>
-                                    <td class="text-center text-dark">
-                                        <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal">
-                                        </i>
+                        <div class=" datatable-parent">
+                            <table class="table table-bordered datatable-table" id="qarisTable" data-count="22">
+                                <thead class="table-dark">
+                                    <th class="text-center">ردیف</th>
+                                    <th class="text-center">نام قاری</th>
+                                    <th class="text-center">تعداد سوره ها</th>
+                                    <th class="text-center">تعداد بازدید ها</th>
+                                    <th class="text-center" data-sortable="false">عملیات</th>
+                                </thead>
+                                <tbody class="custom-table-hover">
+                                    <tr>
+                                        <td class="text-center text-dark">1</td>
+                                        <td class="text-center text-dark">مشاری راشد العفاسی</td>
+                                        <td class="text-center text-dark">114</td>
+                                        <td class="text-center text-dark">1008</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
 
-                                        <i class="fa fa-edit">
-                                        </i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center text-dark">1</td>
-                                    <td class="text-center text-dark">مشاری راشد العفاسی</td>
-                                    <td class="text-center text-dark">114</td>
-                                    <td class="text-center text-dark">1008</td>
-                                    <td class="text-center text-dark">
-                                        <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#deleteModal">
-                                        </i>
-                                        <div class="modal fade" id="deleteModal" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">حذف قاری
-                                                        </h5>
-                                                        <a type="button" class="fa fa-times text-secondary mt-2"
-                                                            aria-label="Close" data-bs-dismiss="modal"></a>
-                                                    </div>
-                                                    <div class="modal-body text-right">مطمئنید می&zwnj;خواهید قاری مورد
-                                                        نظر حذف
-                                                        شود؟</div>
-                                                    <div class="modal-footer justify-content-start">
-                                                        <a type=" button" class="btn btn-danger">بله، حذف کن</a>
-                                                        <button type="button" class="btn btn-light"
-                                                            data-bs-dismiss="modal">خیر، منصرف شدم</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <i class="fa fa-pen">
-                                        </i>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">2</td>
+                                        <td class="text-center text-dark">سعد الغامدی</td>
+                                        <td class="text-center text-dark">98</td>
+                                        <td class="text-center text-dark">107</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center text-dark">3</td>
+                                        <td class="text-center text-dark">ذکوان</td>
+                                        <td class="text-center text-dark">48</td>
+                                        <td class="text-center text-dark">307</td>
+                                        <td class="text-center text-dark">
+                                            <i class="fa fa-trash ml-3" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">
+                                            </i>
+                                            <i class="fa fa-edit">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!-- End of Content Wrapper -->
@@ -246,7 +493,7 @@
             </div>
             <!-- End of Page Wrapper -->
         </div>
-        <script src="http://127.0.0.1:5500/public/assets/js/script.js"></script>      
+        <script src="http://127.0.0.1:5500/public/assets/js/script.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/bootstrap.bundle.min.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/jquery.min.js"></script>
         <script src="http://127.0.0.1:5500/public/assets/js/jquery.easing.min.js"></script>

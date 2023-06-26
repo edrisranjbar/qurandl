@@ -163,77 +163,139 @@
                         </ul>
                     </nav>
                     <!-- Begin Page Content -->
-                    <form class="d-flex flex-row">
-                        <div class="d-flex flex-column col-8 mt-4">
-                            <label for="qari-name-input" class="text-right mb-2">
-                                نام قاری
-                            </label>
-                            <input id="qari-name-input" type="text" class="form-control mb-3" required>
+                    <div class="container-fluid">
+                        <h1 class="h3 mb-3 mt-3 fw-normal text-right">ایجاد نوشته جدید</h1>
+                        <form class="w-100 p-3 bg-white rounded shadow-sm border" action="{{ route('posts.store') }}"
+                            method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-8 mb-md-5">
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label float-right">نام قاری</label>
+                                        <input type="text" name="title" id="title" class="form-control" required>
+                                    </div>
 
-                            <label for="qari-discription" class="text-right mb-2">
-                                توضیحات
-                            </label>
-                            <textarea name="qari-discription" id="qari-discription" cols="30" rows="10"
-                                class="form-control"></textarea>
+                                    <div class="mb-3">
+                                        <label for="content" class="form-label float-right">توضیحات</label>
+                                        <textarea name="content" id="content" class="form-control" rows="5"
+                                            required></textarea>
+                                    </div>
 
-                            <button type="submit" class="btn btn-dark mt-3 btn-w-icon">
-                                <i class="fa fa-check ml-1"></i>
-                                ثبت</button>
-                        </div>
-                        <nav class="m-0 p-0 navbar-nav  sidebar sidebar-light accordion text-right col-4 border border-dark container-fluid"
-                            id="createqari-sidebar">
-                            <div id="nav-content" class="mx-2">
-                                <div class="form-group">
-                                    <label for="status">وضعیت</label>
-                                    <select class="form-control" name="status" id="status">
-                                        <option value="public">عمومی</option>
-                                        <option value="private">خصوصی</option>
-                                        <option value="draft">پیش نویس</option>
-                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="slug">شناسه یکتا</label>
-                                    <input id="slug" type="text" class="form-control" maxlength="50">
+                                <div class="col-lg-4">
+                                    <div class="w-100 p-3 bg-white rounded shadow-sm border">
+                                        <div class="mb-3">
+                                            <label for="slug" class="form-label float-right" min-length="3"
+                                                required>شناسه یکتا</label>
+                                            <input name="slug" type="text" class="form-control" id="slug"
+                                                pattern="[a-zA-Z]+" maxlength="50" min="1" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label float-right">وضعیت</label>
+                                            <select name="status" id="status" class="form-select" required>
+                                                <option value="public">عمومی</option>
+                                                <option value="private">خصوصی</option>
+                                                <option value="draft">پیش‌نویس</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="thumbnail" class="form-label float-right">تصویر قاری</label>
+                                            <input type="file" name="thumbnail" id="thumbnail" class="form-control"
+                                                accept=".jpg, .png, .jpeg">
+                                        </div>
+
+                                        <div class="mb-3 d-flex flex-column align-items-start">
+                                            <label for="qiraat" class="float-right">قرائات</label>
+                                            <div id="qiraat" class="border rounded-lg py-2 w-100 overflow-y-auto">
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        حفص عن عاصم
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        ورش عن نافع
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        قالون عن نافع
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        الدوري عن أبي عمرو
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        أبي الحارث عن الكسائي
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        الدوري عن الكسائي
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        شعبة عن عاصم
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        قنبل عن ابن كثير
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        البزي عن ابن كثير
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        السوسي عن أبي عمرو
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="qiraat" class="form-check-lable form-check">
-                                        قرائات
-                                    </label>
-                                    <div id="qiraat">
-                                        <label for="hafsanasim" class="form-check-lable">
-                                            حفص عن عاصم
-                                            <input class="form-check-input" id="hafsanasim" type="checkbox" checked>
-                                        </label>
-                                        <label for="varshannafii" class="form-check-label">
-                                            ورش عن نافع
-                                            <input class"" id="varshannafii" type="checkbox">
-                                        </label>
-                                        <label for="qhaloonannafii">
-                                            قالون عن نافع
-                                            <input class="custom-checkbox" id="qhaloonannafii" type="checkbox">
-                                        </label>
-                                        <label for="option-4">
-                                            حفص عن عاصم
-                                            <input class="custom-checkbox" id="option-4" type="checkbox">
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Default checkbox
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                            checked>
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                            Checked checkbox
-                                        </label>
-                                    </div>
+                                <div class="d-flex flex-wrap mt-2">
+                                    <button type="submit" class="btn btn-w-icon btn-primary mt-2 me-2">
+                                        <i class="fa-solid fa-fw fa-check me-1"></i>
+                                        ثبت
+                                    </button>
+                                    <a class="btn btn-w-icon btn-outline-primary mt-2 me-2">
+                                        <i class="fa-solid fa-fw fa-list-check me-1"></i>
+                                        ثبت و ساخت جدید
+                                    </a>
                                 </div>
                             </div>
-                        </nav>
-                    </form>
+                        </form>
+                    </div>
+
 
                 </div>
                 <!-- End of Content Wrapper -->

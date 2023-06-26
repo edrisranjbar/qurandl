@@ -462,3 +462,7 @@ table.datatable-table:focus {
 button[type="submit"] {
     width: fit-content;
 }
+
+#qiraat {
+    max-height: 140px;
+}

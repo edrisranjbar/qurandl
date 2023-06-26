@@ -56,3 +56,11 @@ if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
     });
 
 })(jQuery); // End of use strict
+
+$(document).ready(function () {
+    var currentPath = window.location.href.replace(/\/$/, '');
+    var $activeItem = $('#accordionSidebar').find('a[href="' + currentPath + '"]');
+    $activeItem.closest('.collapse').addClass('show');
+    $activeItem.closest('.collapse').prev().attr('aria-expanded', 'true');
+
+});

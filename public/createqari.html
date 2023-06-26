@@ -10,6 +10,7 @@
     <link href="http://127.0.0.1:5500/public/assets/fonts/fontawesome-6.2.1/css/all.css" rel="stylesheet"
         type="text/css">
     <link href="http://127.0.0.1:5500/public/assets/css/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://127.0.0.1:5500/public/assets/css/bootstrap.rtl.min.css">
     <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2.css" rel="stylesheet">
     <link href="http://127.0.0.1:5500/public/assets/css/sb-admin-2-override.css" rel="stylesheet">
 
@@ -162,43 +163,1501 @@
                         </ul>
                     </nav>
                     <!-- Begin Page Content -->
-                    <form class="d-flex flex-row">
-                        <div class="d-flex flex-column col-8 mt-4">
-                            <label for="qari-name-input" class="text-right mb-2">
-                                نام قاری
-                            </label>
-                            <input id="qari-name-input" type="text" class="form-control mb-3" required>
+                    <div class="container-fluid">
+                        <h1 class="h3 mb-3 mt-3 fw-normal text-right">ایجاد قاری جدید</h1>
+                        <form class="w-100 p-3 bg-white rounded shadow-sm border " action="{{ route('posts.store') }}"
+                            method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-8 mb-md-5">
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label fs-5 float-right">نام قاری</label>
+                                        <input type="text" name="title" id="title" class="form-control" required>
+                                    </div>
 
-                            <label for="qari-discription" class="text-right mb-2">
-                                توضیحات
-                            </label>
-                            <textarea name="qari-discription" id="qari-discription" cols="30" rows="10"
-                                class="form-control"></textarea>
+                                    <div class="mb-3">
+                                        <label for="content" class="form-label fs-5 float-right">توضیحات</label>
+                                        <textarea name="content" id="content" class="form-control" rows="5"
+                                            required></textarea>
+                                    </div>
+                                    <div class="mb-3 d-flex flex-column align-items-start">
+                                        <label class="fs-5 float-right" for="surah-list">آپلود سوره</label>
+                                        <div id="surah-list"
+                                            class="form-group row border rounded mx-1 py-3 overflow-y-auto">
+                                            <!-- surah 1 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-1" class="mb-0"><strong>1.</strong>
+                                                        الفاتحة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-1" name="surah_1" type="url" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 2 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-2" class="mb-0"><strong>2.</strong> البقرة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-2" name="surah_2" type="url" class="form-control">
+                                                </div>
+                                            </div>
 
-                            <button type="submit" class="btn btn-dark mt-3 btn-w-icon">
-                                <i class="fa fa-check ml-1"></i>
-                                ثبت</button>
-                        </div>
-                        <nav class="m-0 p-0 navbar-nav  sidebar sidebar-light accordion text-right col-4 border border-dark container-fluid"
-                            id="createqari-sidebar">
-                            <label for="status">وضعیت</label>
-                            <select class="form-control mb-4" name="status" id="status">
-                                <option value="public">عمومی</option>
-                                <option value="private">خصوصی</option>
-                                <option value="draft">پیش نویس</option>
-                            </select>
-                            <label for="slug">شناسه یکتا</label>
-                            <input id="slug" type="text" class="form-control" maxlength="50">
+                                            <!-- Surah 3 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-3" class="mb-0"><strong>3.</strong> سورة آل
+                                                        عمران</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-3" name="surah_3" type="url" class="form-control">
+                                                </div>
+                                            </div>
 
-                            <label for="qiraat"></label>
-                            <div class="form-check-group">
-                                <label for="" class="form-check-lable form-check">
-                                    <input class="form-check" type="checkbox">
-                                </label>
+                                            <!-- Surah 4 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-4" class="mb-0"><strong>4.</strong> النساء</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-4" name="surah_4" type="url" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 5 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-5" class="mb-0"><strong>5.</strong>
+                                                        المائدة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-5" name="surah_5" type="url" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 6 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-6" class="mb-0"><strong>6.</strong>
+                                                        الأنعام</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-6" name="surah_6" type="url" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 7 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-7" class="mb-0"><strong>7.</strong>
+                                                        الأعراف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-7" name="surah_7" type="url" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 8 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-8" class="mb-0"><strong>8.</strong>
+                                                        الأنفال</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-8" name="surah_8" type="url" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 9 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-9" class="mb-0"><strong>9.</strong> التوبة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-9" name="surah_9" type="url" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 10 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-10" class="mb-0"><strong>10.</strong> يونس</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-10" name="surah_10" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 11 to Surah 114 -->
+
+                                            <!-- Surah 11 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-11" class="mb-0"><strong>11.</strong> هود</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-11" name="surah_11" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 12 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-12" class="mb-0"><strong>12.</strong> يوسف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-12" name="surah_12" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 13 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-13" class="mb-0"><strong>13.</strong>
+                                                        الرعد</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-13" name="surah_13" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 14 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-14" class="mb-0"><strong>14.</strong>
+                                                        إبراهيم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-14" name="surah_14" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 15 to Surah 114 -->
+
+                                            <!-- Surah 15 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-15" class="mb-0"><strong>15.</strong>
+                                                        الحجر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-15" name="surah_15" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 16 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-16" class="mb-0"><strong>16.</strong>
+                                                        النحل</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-16" name="surah_16" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 17 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-17" class="mb-0"><strong>17.</strong>
+                                                        الإسراء</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-17" name="surah_17" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 18 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-18" class="mb-0"><strong>18.</strong>
+                                                        الكهف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-18" name="surah_18" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 19 to Surah 114 -->
+
+                                            <!-- Surah 19 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-19" class="mb-0"><strong>19.</strong> مريم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-19" name="surah_19" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 20 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-20" class="mb-0"><strong>20.</strong> طه</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-20" name="surah_20" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 21 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-21" class="mb-0"><strong>21.</strong>
+                                                        الأنبياء</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-21" name="surah_21" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 22 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-22" class="mb-0"><strong>22.</strong> الحج</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-22" name="surah_22" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 23 to Surah 114 -->
+
+                                            <!-- Surah 23 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-23" class="mb-0"><strong>23.</strong>
+                                                        المؤمنون</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-23" name="surah_23" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 24 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-24" class="mb-0"><strong>24.</strong>
+                                                        النور</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-24" name="surah_24" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 25 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-25" class="mb-0"><strong>25.</strong>
+                                                        الفرقان</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-25" name="surah_25" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 26 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-26" class="mb-0"><strong>26.</strong>
+                                                        الشعراء</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-26" name="surah_26" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 27 to Surah 114 -->
+
+                                            <!-- Surah 27 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-27" class="mb-0"><strong>27.</strong>
+                                                        النمل</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-27" name="surah_27" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 28 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-28" class="mb-0"><strong>28.</strong>
+                                                        القصص</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-28" name="surah_28" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 29 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-29" class="mb-0"><strong>29.</strong>
+                                                        العنكبوت</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-29" name="surah_29" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 30 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-30" class="mb-0"><strong>30.</strong>
+                                                        الروم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-30" name="surah_30" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 31 to Surah 114 -->
+
+                                            <!-- Surah 31 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-31" class="mb-0"><strong>31.</strong>
+                                                        لقمان</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-31" name="surah_31" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 32 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-32" class="mb-0"><strong>32.</strong>
+                                                        السجدة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-32" name="surah_32" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 33 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-33" class="mb-0"><strong>33.</strong>
+                                                        الأحزاب</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-33" name="surah_33" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 34 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-34" class="mb-0"><strong>34.</strong> سبأ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-34" name="surah_34" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 35 to Surah 114 -->
+
+                                            <!-- Surah 35 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-35" class="mb-0"><strong>35.</strong> فاطر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-35" name="surah_35" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 36 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-36" class="mb-0"><strong>36.</strong> يس</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-36" name="surah_36" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 37 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-37" class="mb-0"><strong>37.</strong>
+                                                        الصافات</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-37" name="surah_37" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 38 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-38" class="mb-0"><strong>38.</strong> ص</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-38" name="surah_38" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 39 to Surah 114 -->
+
+                                            <!-- Surah 39 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-39" class="mb-0"><strong>39.</strong>
+                                                        الزمر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-39" name="surah_39" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 40 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-40" class="mb-0"><strong>40.</strong> غافر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-40" name="surah_40" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Repeat the following code block for Surah 41 to Surah 114 -->
+
+                                            <!-- Surah 41 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-41" class="mb-0"><strong>41.</strong> فصلت</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-41" name="surah_41" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 42 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-42" class="mb-0"><strong>42.</strong>
+                                                        الشورى</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-42" name="surah_42" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 43 to Surah 114 -->
+
+                                            <!-- Surah 43 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-43" class="mb-0"><strong>43.</strong>
+                                                        الزخرف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-43" name="surah_43" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 44 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-44" class="mb-0"><strong>44.</strong>
+                                                        الدخان</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-44" name="surah_44" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 45 to Surah 114 -->
+
+                                            <!-- Surah 45 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-45" class="mb-0"><strong>45.</strong>
+                                                        الجاثية</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-45" name="surah_45" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 46 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-46" class="mb-0"><strong>46.</strong>
+                                                        الأحقاف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-46" name="surah_46" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 47 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-47" class="mb-0"><strong>47.</strong> محمد</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-47" name="surah_47" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 48 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-48" class="mb-0"><strong>48.</strong>
+                                                        الفتح</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-48" name="surah_48" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Repeat the following code block for Surah 49 to Surah 114 -->
+
+                                            <!-- Surah 49 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-49" class="mb-0"><strong>49.</strong>
+                                                        الحجرات</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-49" name="surah_49" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 50 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-50" class="mb-0"><strong>50.</strong> ق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-50" name="surah_50" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 51 to Surah 114 -->
+
+                                            <!-- Surah 51 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-51" class="mb-0"><strong>51.</strong>
+                                                        الذاريات</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-51" name="surah_51" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 52 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-52" class="mb-0"><strong>52.</strong>
+                                                        الطور</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-52" name="surah_52" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Repeat the following code block for Surah 53 to Surah 114 -->
+
+                                            <!-- Surah 53 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-53" class="mb-0"><strong>53.</strong>
+                                                        النجم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-53" name="surah_53" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 54 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-54" class="mb-0"><strong>54.</strong>
+                                                        القمر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-54" name="surah_54" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 55 to Surah 114 -->
+
+                                            <!-- Surah 55 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-55" class="mb-0"><strong>55.</strong>
+                                                        الرحمن</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-55" name="surah_55" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 56 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-56" class="mb-0"><strong>56.</strong>
+                                                        الواقعة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-56" name="surah_56" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 57 to Surah 114 -->
+
+                                            <!-- Surah 57 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-57" class="mb-0"><strong>57.</strong>
+                                                        الحديد</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-57" name="surah_57" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 58 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-58" class="mb-0"><strong>58.</strong>
+                                                        المجادلة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-58" name="surah_58" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 59 to Surah 114 -->
+
+                                            <!-- Surah 59 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-59" class="mb-0"><strong>59.</strong>
+                                                        الحشر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-59" name="surah_59" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 60 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-60" class="mb-0"><strong>60.</strong>
+                                                        الممتحنة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-60" name="surah_60" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 61 to Surah 114 -->
+
+                                            <!-- Surah 61 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-61" class="mb-0"><strong>61.</strong> الصف</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-61" name="surah_61" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 62 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-62" class="mb-0"><strong>62.</strong>
+                                                        الجمعة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-62" name="surah_62" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 63 to Surah 114 -->
+
+                                            <!-- Surah 63 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-63" class="mb-0"><strong>63.</strong>
+                                                        المنافقون</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-63" name="surah_63" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 64 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-64" class="mb-0"><strong>64.</strong>
+                                                        التغابن</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-64" name="surah_64" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 65 to Surah 114 -->
+
+                                            <!-- Surah 65 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-65" class="mb-0"><strong>65.</strong>
+                                                        الطلاق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-65" name="surah_65" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 66 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-66" class="mb-0"><strong>66.</strong>
+                                                        التحريم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-66" name="surah_66" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 67 to Surah 114 -->
+
+                                            <!-- Surah 67 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-67" class="mb-0"><strong>67.</strong>
+                                                        الملك</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-67" name="surah_67" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 68 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-68" class="mb-0"><strong>68.</strong>
+                                                        القلم</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-68" name="surah_68" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 69 to Surah 114 -->
+
+                                            <!-- Surah 69 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-69" class="mb-0"><strong>69.</strong>
+                                                        الحاقة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-69" name="surah_69" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 70 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-70" class="mb-0"><strong>70.</strong>
+                                                        المعارج</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-70" name="surah_70" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 71 to Surah 114 -->
+
+                                            <!-- Surah 71 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-71" class="mb-0"><strong>71.</strong> نوح</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-71" name="surah_71" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 72 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-72" class="mb-0"><strong>72.</strong> الجن</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-72" name="surah_72" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 73 to Surah 114 -->
+
+                                            <!-- Surah 73 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-73" class="mb-0"><strong>73.</strong>
+                                                        الْمُزَّمِّلُ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-73" name="surah_73" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 74 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-74" class="mb-0"><strong>74.</strong>
+                                                        الْمُدَّثِّرُ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-74" name="surah_74" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 75 to Surah 114 -->
+
+                                            <!-- Surah 75 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-75" class="mb-0"><strong>75.</strong>
+                                                        الْقِيَامَةُ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-75" name="surah_75" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 76 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-76" class="mb-0"><strong>76.</strong>
+                                                        الْإِنسَانُ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-76" name="surah_76" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the following code block for Surah 77 to Surah 114 -->
+
+                                            <!-- Surah 77 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-77" class="mb-0"><strong>77.</strong>
+                                                        الْمُرْسَلَاتُ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-77" name="surah_77" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 78 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-78" class="mb-0"><strong>78.</strong>
+                                                        النبأ</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-78" name="surah_78" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 79 to Surah 114 -->
+
+                                            <!-- Surah 79 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-79" class="mb-0"><strong>79.</strong>
+                                                        النازعات</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-79" name="surah_79" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 80 -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-80" class="mb-0"><strong>80.</strong> عبس</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-80" name="surah_80" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 80: عبس -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-80" class="mb-0"><strong>80.</strong> عبس</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-80" name="surah_80" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 81: التكوير -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-81" class="mb-0"><strong>81.</strong>
+                                                        التكوير</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-81" name="surah_81" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 82 to Surah 114 -->
+
+                                            <!-- Surah 82: الإنفطار -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-82" class="mb-0"><strong>82.</strong>
+                                                        الإنفطار</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-82" name="surah_82" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 83: المطففين -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-83" class="mb-0"><strong>83.</strong>
+                                                        المطففين</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-83" name="surah_83" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 84: الانشقاق -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-84" class="mb-0"><strong>84.</strong>
+                                                        الانشقاق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-84" name="surah_84" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 85: البروج -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-85" class="mb-0"><strong>85.</strong>
+                                                        البروج</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-85" name="surah_85" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 86 to Surah 114 -->
+
+                                            <!-- Surah 86: الطارق -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-86" class="mb-0"><strong>86.</strong>
+                                                        الطارق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-86" name="surah_86" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 87: الأعلى -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-87" class="mb-0"><strong>87.</strong>
+                                                        الأعلى</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-87" name="surah_87" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 92: الليل -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-92" class="mb-0"><strong>92.</strong>
+                                                        الليل</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-92" name="surah_92" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 93: الضحى -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-93" class="mb-0"><strong>93.</strong>
+                                                        الضحى</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-93" name="surah_93" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 94 to Surah 114 -->
+
+                                            <!-- Surah 94: الشرح -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-94" class="mb-0"><strong>94.</strong>
+                                                        الشرح</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-94" name="surah_94" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 95: التين -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-95" class="mb-0"><strong>95.</strong>
+                                                        التين</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-95" name="surah_95" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 96: العلق -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-96" class="mb-0"><strong>96.</strong>
+                                                        العلق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-96" name="surah_96" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 97: القدر -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-97" class="mb-0"><strong>97.</strong>
+                                                        القدر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-97" name="surah_97" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 98 to Surah 114 -->
+
+                                            <!-- Surah 98: البينة -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-98" class="mb-0"><strong>98.</strong>
+                                                        البينة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-98" name="surah_98" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 99: الزلزلة -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-99" class="mb-0"><strong>99.</strong>
+                                                        الزلزلة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-99" name="surah_99" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 100: العاديات -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-100" class="mb-0"><strong>100.</strong>
+                                                        العاديات</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-100" name="surah_100" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 101: القارعة -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-101" class="mb-0"><strong>101.</strong>
+                                                        القارعة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-101" name="surah_101" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 102 to Surah 114 -->
+
+                                            <!-- Surah 102: التكاثر -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-102" class="mb-0"><strong>102.</strong>
+                                                        التكاثر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-102" name="surah_102" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 103: العصر -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-103" class="mb-0"><strong>103.</strong>
+                                                        العصر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-103" name="surah_103" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 104: الهمزة -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-104" class="mb-0"><strong>104.</strong>
+                                                        الهمزة</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-104" name="surah_104" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 105: الفيل -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-105" class="mb-0"><strong>105.</strong>
+                                                        الفيل</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-105" name="surah_105" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 106: قريش -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-106" class="mb-0"><strong>106.</strong>
+                                                        قريش</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-106" name="surah_106" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 107 to Surah 114 -->
+
+                                            <!-- Surah 107: الماعون -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-107" class="mb-0"><strong>107.</strong>
+                                                        الماعون</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-107" name="surah_107" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 108: الكوثر -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-108" class="mb-0"><strong>108.</strong>
+                                                        الكوثر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-108" name="surah_108" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 109: الكافرون -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-109" class="mb-0"><strong>109.</strong>
+                                                        الكافرون</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-109" name="surah_109" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 110: النصر -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-110" class="mb-0"><strong>110.</strong>
+                                                        النصر</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-110" name="surah_110" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Repeat the above code block for Surah 111 to Surah 114 -->
+
+                                            <!-- Surah 111: المسد -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-111" class="mb-0"><strong>111.</strong>
+                                                        المسد</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-111" name="surah_111" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 112: الإخلاص -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-112" class="mb-0"><strong>112.</strong>
+                                                        الإخلاص</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-112" name="surah_112" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- Surah 113: الفلق -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-113" class="mb-0"><strong>113.</strong>
+                                                        الفلق</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-113" name="surah_113" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- Surah 114: الناس -->
+                                            <div class="row mb-3">
+                                                <div class="col-4 d-flex align-items-center">
+                                                    <label for="surah-114" class="mb-0"><strong>114.</strong>
+                                                        الناس</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input id="surah-114" name="surah_114" type="url"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- left sidebar -->
+                                <div class="col-lg-4">
+                                    <div class="w-100 p-3 bg-white rounded shadow-sm border">
+                                        <div class="mb-3">
+                                            <label for="slug" class="form-label fs-5 float-right" min-length="3"
+                                                required>شناسه یکتا</label>
+                                            <input name="slug" type="text" class="form-control" id="slug"
+                                                pattern="[a-zA-Z]+" maxlength="50" min="1" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="status" class="form-label fs-5 float-right">وضعیت</label>
+                                            <select name="status" id="status" class="form-select" required>
+                                                <option value="public">عمومی</option>
+                                                <option value="private">خصوصی</option>
+                                                <option value="draft">پیش‌نویس</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="thumbnail" class="form-label fs-5 float-right">تصویر
+                                                قاری</label>
+                                            <input type="file" name="thumbnail" id="thumbnail" class="form-control"
+                                                accept=".jpg, .png, .jpeg">
+                                        </div>
+
+                                        <div class="mb-3 d-flex flex-column align-items-start">
+                                            <label for="qiraat" class="form-label fs-5 float-right">قرائات</label>
+                                            <div id="qiraat" class="border rounded-lg py-2 w-100 overflow-y-auto">
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        حفص عن عاصم
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        ورش عن نافع
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        قالون عن نافع
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        الدوري عن أبي عمرو
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        أبي الحارث عن الكسائي
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        الدوري عن الكسائي
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        شعبة عن عاصم
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        قنبل عن ابن كثير
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        البزي عن ابن كثير
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+                                                <div class="form-check text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        السوسي عن أبي عمرو
+                                                    </label>
+                                                    <input class="form-check-input ms-3" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of left sidebar -->
+                                <div class="d-flex flex-wrap mt-2">
+                                    <button type="submit" class="btn btn-w-icon btn-primary mt-2 me-2">
+                                        <i class="fa-solid fa-fw fa-check me-1"></i>
+                                        ثبت
+                                    </button>
+                                    <a class="btn btn-w-icon btn-outline-primary mt-2 me-2">
+                                        <i class="fa-solid fa-fw fa-list-check me-1"></i>
+                                        ثبت و ساخت جدید
+                                    </a>
+                                </div>
                             </div>
+                        </form>
+                    </div>
 
-                        </nav>
-                    </form>
 
                 </div>
                 <!-- End of Content Wrapper -->

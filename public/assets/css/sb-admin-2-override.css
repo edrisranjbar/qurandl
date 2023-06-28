@@ -470,3 +470,7 @@ button[type="submit"] {
 #surah-list {
     max-height: 200px;
 }
+
+.login-card{
+    width:500px;
+}

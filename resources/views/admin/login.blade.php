@@ -1,7 +1,7 @@
 @section('title', 'ورود')
 @extends('layouts.login')
 @section('content')
-    <div class="w-50 card o-hidden border-0 shadow-lg my-5 mx-auto rounded">
+    <div class="login-card card o-hidden border-0 shadow-lg my-5 mx-auto rounded">
         <div class="card-body p-0">
             <div class="col-lg-12">
                 <div class="p-5">

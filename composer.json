@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "qurandl/qurandl",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Quran Download is an online website that allows users to download and listen to Quran recitations. The website offers a wide range of recitations from different reciters. Users can search for recitations by surah or reciter.",
+    "keywords": ["Quran", "QuranDL", "Quran Download"],
     "license": "MIT",
     "require": {
         "php": "^8.1",

@@ -11,7 +11,6 @@
     <link href="{{ asset('assets/css/fonts.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/sb-admin-2.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/sb-admin-2-override.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body id="page-top" dir="rtl">

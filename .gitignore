@@ -1,3 +1,13 @@
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
 /vendor/
 node_modules/
 npm-debug.log

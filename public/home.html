@@ -6,10 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="http://127.0.0.1:5500/public/assets/fonts/fontawesome-6.2.1/css/all.css" rel="stylesheet"
+        type="text/css">
+    <link href="http://127.0.0.1:5500/public/assets/css/fonts.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-    <h1 class="text-4xl">hello world</h1>
+<body class="font">
+    <header class="shadow-md mb-12">
+        <div class="relative md:container mx-auto p-4">
+            <div class="flex flex-row-reverse items-center justify-between">
+
+                <div id="logo-container" class="pt-2">
+                    <a href="#" class="flex flex-row-reverse">
+                        <img class="ml-3" src="images/koran.png" alt="logo">
+                        <span>قرآن دانلود</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#contact-us">تماس با ما</a>
+                    <a href="#about-us">درباره ما</a>
+                    <a href="#home">خانه</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container flex flex-col items-end">
+            <div>
+                <input dir="rtl" type="text" class="border border-gray-500 rounded h-9 focus:border-blue-300 focus:border-2S p-6">
+            </div>
+            <div id="qaris-carrousel">
+
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

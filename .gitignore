@@ -32,3 +32,6 @@ Homestead.json
 /.vagrant
 /.idea
 .phpunit.result.cache
+
+# Visual Studio Code
+.vscode/

@@ -39,11 +39,68 @@
                     class="border bg-gray-100 rounded h-9 p-5 pb-7 pr-10 w-full focus:bg-white transition-all ease-in-out focus:shadow focus:outline-0 peer">
                 <i class="fa-solid fa-search text-gray-400 mr-3 text-xl absolute text-center peer-focus:text-black"></i>
             </div>
-            <div id="qaris-carrousel">
-
+            <div class="flex-row mt-96" id="best-reciatations">
+                <div class="aspect-square bg-red-400 w-44 rounded-lg flex flex-col justify-between"
+                    id="recitation-card">
+                    <div id="recitation-card-body">
+                        <audio class="w-full p-1" src="audios/001.mp3" controls></audio>
+                    </div>
+                    <div class="flex flex-row-reverse" id="recitation-card-footer">
+                        <div class="w-12 p-1 aspect-square">
+                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <label for="qari-profile" class="text-sm flex items-center">مشاری راشد العفاسی</label>
+                    </div>
+                </div>
             </div>
+            <div class="audio-content">
+                <div class="audio-controls">
+                    <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
+                    <div class="flex jc-center ai-center">
+                        <button id="rewindButton" class="button-container button-48">
+                            <div class="button-face white-button">
+                                <img class="button-icon" alt="10 ثانیه عقب">
+                                <div class="button-hover"></div>
+                            </div>
+                        </button>
+                        <button id="playButton" class="button-container button-56 play-button paused">
+                            <div class="button-face yellow-button">
+                                <img class="button-icon play-icon" alt="پخش">
+                                <img class="button-icon pause-icon" alt="توقف">
+                                <div class="button-glow"></div>
+                                <div class="button-hover"></div>
+                            </div>
+                        </button>
+                        <button id="forwardButton" class="button-container button-48">
+                            <div class="button-face white-button">
+                                <img class="button-icon" alt="10 ثانیه جلو">
+                                <div class="button-hover"></div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="audio-timeline-container">
+                        <input class="audio-timeline" id="timelineController" type="range" min="0" max="100" value="0">
+                        <div class="audio-timeline-face" id="timelineFace"></div>
+                    </div>
+                    <div class="flex jc-sb">
+                        <span id="audioCurrentTime">0:00</span>
+                        <span id="audioDuration">0:00</span>
+                    </div>
+                    <a class="button-container button-48 download-button" target="_blank">
+                        <div class="button-face green-button text-button">
+                            <div class="button-text">دانلود این فایل</div>
+                            <div class="button-glow"></div>
+                            <div class="button-hover"></div>
+                        </div>
+                    </a>
+                </div>
+                <h2>توضیحات</h2>
+            </div>
+
         </div>
     </main>
+
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>

@@ -62,12 +62,7 @@ window.addEventListener('load', function () {
 });
 
 get(ui.play).addEventListener('click', togglePlay);
-get(ui.rewind).addEventListener('click', function () {
-    audio.currentTime -= 10;
-});
-get(ui.forward).addEventListener('click', function () {
-    audio.currentTime += 10;
-});
+
 get(ui.seeker).addEventListener('input', seek);
 audio.addEventListener('timeupdate', updateProgressBar);
 audio.addEventListener('play', function () {

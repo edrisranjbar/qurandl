@@ -43,7 +43,38 @@
                 <div class="aspect-square bg-red-400 w-44 rounded-lg flex flex-col justify-between"
                     id="recitation-card">
                     <div id="recitation-card-body">
-                        <audio class="w-full p-1" src="audios/001.mp3" controls></audio>
+                        <div class="audio-content">
+                            <div class="audio-controls">
+                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
+                                <div class="flex items-center p-1">
+                                    <div class="justify-center items-start mr-1">
+                                        <button id="playButton" class="button-container button-56 play-button paused">
+                                            <div class="button-face yellow-button">
+                                                <div class="bg-blue-800 rounded-full">
+                                                    <img class="button-icon play-icon p-2"
+                                                        src="https://sammakqoran.com/wp-content/themes/sammakquran/icons/play.svg"
+                                                        alt="پخش">
+                                                </div>
+                                                <div class="bg-blue-800 rounded-full ">
+                                                    <img class="button-icon pause-icon p-2"
+                                                        src="https://sammakqoran.com/wp-content/themes/sammakquran/icons/pause.svg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="audio-timeline-container">
+                                        <input class="audio-timeline" id="timelineController" type="range" min="0"
+                                            max="100" value="0">
+                                        <div class="audio-timeline-face" id="timelineFace"></div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span id="audioCurrentTime" class="ml-1">0:00</span>
+                                    <span id="audioDuration" class="mr-1">0:00</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex flex-row-reverse" id="recitation-card-footer">
                         <div class="w-12 p-1 aspect-square">
@@ -52,47 +83,6 @@
                         <label for="qari-profile" class="text-sm flex items-center">مشاری راشد العفاسی</label>
                     </div>
                 </div>
-            </div>
-            <div class="audio-content">
-                <div class="audio-controls">
-                    <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                    <div class="flex jc-center ai-center">
-                        <button id="rewindButton" class="button-container button-48">
-                            <div class="button-face white-button">
-                                <img class="button-icon" alt="10 ثانیه عقب">
-                                <div class="button-hover"></div>
-                            </div>
-                        </button>
-                        <button id="playButton" class="">
-                            <div class="">
-                                <img class="" src="images/icons8-play-48.png" alt="پخش">
-                                <img class="hidden" src="images/icons8-pause-48.png" alt="توقف">
-                            </div>
-                        </button>
-                        <button id="forwardButton" class="button-container button-48">
-                            <div class="button-face white-button">
-                                <img class="button-icon" alt="10 ثانیه جلو">
-                                <div class="button-hover"></div>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="audio-timeline-container">
-                        <input class="audio-timeline" id="timelineController" type="range" min="0" max="100" value="0">
-                        <div class="audio-timeline-face" id="timelineFace"></div>
-                    </div>
-                    <div class="flex jc-sb">
-                        <span id="audioCurrentTime">0:00</span>
-                        <span id="audioDuration">0:00</span>
-                    </div>
-                    <a class="button-container button-48 download-button" target="_blank">
-                        <div class="button-face green-button text-button">
-                            <div class="button-text">دانلود این فایل</div>
-                            <div class="button-glow"></div>
-                            <div class="button-hover"></div>
-                        </div>
-                    </a>
-                </div>
-                <h2>توضیحات</h2>
             </div>
 
         </div>

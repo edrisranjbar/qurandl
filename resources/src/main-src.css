@@ -81,3 +81,20 @@ body {
 }
 
 /* custom audio player end */
+
+/* Splider arrows */
+.reel-desc {
+    position: relative;
+    max-width: 1440px;
+    padding: 0 24px;
+    margin: 0 auto 24px;
+}
+
+.splide .splide__arrows {
+    position: absolute;
+    top: -32px;
+    left: 0px;
+    display: flex;
+    justify-content: flex-start !important;
+    width: 100px;
+}

@@ -23,10 +23,11 @@
                     </a>
                 </div>
 
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#contact-us">تماس با ما</a>
+                <nav class="hidden md:flex md:flex-row-reverse space-x-6">
+                    <a href="#home" class="ml-6">صفحه اصلی</a>
+                    <a href="#qaris">قاری ها</a>
+                    <a href="#best-recitations">تلاوات خاشعه</a>
                     <a href="#about-us">درباره ما</a>
-                    <a href="#home">خانه</a>
                 </nav>
             </div>
         </div>
@@ -40,14 +41,14 @@
                 <i class="fa-solid fa-search text-gray-400 mr-3 text-xl absolute text-center peer-focus:text-black"></i>
             </div>
             <div class="flex-row mt-96" id="best-reciatations">
-                <div class="aspect-square shadow-2xl outline w-48 rounded-lg flex flex-col justify-between"
+                <div class="aspect-square shadow-2xl outline w-48 rounded-lg flex flex-col justify-between p-2"
                     id="recitation-card">
-                    <div id="recitation-card-body">
+                    <div id="recitation-card-body" class="flex-col">
                         <div class="audio-content">
                             <div class="audio-controls">
                                 <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                <div class="flex items-center p-1">
-                                    <div class="justify-center items-start mr-1">
+                                <div class="flex items-center mt-2">
+                                    <div class="justify-center items-start mr-2">
                                         <button id="playButton" class="button-container button-56 play-button paused">
                                             <div class="button-face yellow-button">
                                                 <div class="rounded-full border button-icon play-icon">
@@ -70,12 +71,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="best-recitation-title" class="flex justify-end">
+                            <h3 class="font-medium mt-7">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
+                        </div>
                     </div>
                     <div class="flex flex-row-reverse" id="recitation-card-footer">
-                        <div class="w-12 p-1 aspect-square">
+                        <div class="w-12 aspect-square">
                             <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
                         </div>
-                        <label for="qari-profile" class="text-sm flex items-center">مشاری راشد العفاسی</label>
+                        <label for="qari-profile" class="text-sm flex items-center mr-2">مشاری راشد العفاسی</label>
                     </div>
                 </div>
             </div>

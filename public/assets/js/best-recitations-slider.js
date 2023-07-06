@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('.splide', {
         drag: 'free',
-        perPage: 4,
+        perPage: '4',
+        pagination: false,
         direction: 'rtl',
         gap: '16px',
         updateOnMove: true,

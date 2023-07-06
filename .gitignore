@@ -40,3 +40,6 @@ Homestead.json
 
 # Visual Studio Code
 .vscode/
+
+# local assets
+public/audios

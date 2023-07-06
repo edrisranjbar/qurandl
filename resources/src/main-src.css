@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: #4ECDC4;
+    --dark-primary: #006C67;
+    --secondary: #F8F0FB;
+}
+
 body {
     font-family: Vazirmatn FD;
 }
@@ -57,9 +63,9 @@ body {
     width: 12px;
     background-color: #fff;
     border-radius: 50%;
-    border: 2px solid #f50;
+    border: 2px solid var(--primary);
     /*  slider progress trick  */
-    box-shadow: -407px 0 0 400px #f50;
+    box-shadow: -407px 0 0 400px var(--primary);
 }
 
 
@@ -67,11 +73,11 @@ body {
 .audio-timeline::-moz-range-thumb {
     height: 12px;
     width: 12px;
-    background-color: #f50;
+    background-color: var(--primary);
     border-radius: 50%;
-    border: 1px solid #f50;
+    border: 1px solid var(--primary);
     /*  slider progress trick  */
-    box-shadow: -407px 0 0 400px #f50;
+    box-shadow: -407px 0 0 400px var(--primary);
 }
 
 /* custom audio player end */

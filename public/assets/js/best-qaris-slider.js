@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var splide = new Splide('.splide#best-recitations-slider', {
+    var splide = new Splide('.splide#best-qaris-slider', {
         drag: 'free',
         perPage: '4',
         pagination: false,

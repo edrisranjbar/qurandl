@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
                 <i class="fa-solid fa-search text-gray-400 mr-3 text-xl absolute text-center peer-focus:text-black"></i>
             </div>
             <div class="flex-row mt-96" id="best-reciatations">
-                <div class="aspect-square bg-red-400 w-44 rounded-lg flex flex-col justify-between"
+                <div class="aspect-square shadow-2xl outline w-48 rounded-lg flex flex-col justify-between"
                     id="recitation-card">
                     <div id="recitation-card-body">
                         <div class="audio-content">
@@ -50,28 +50,23 @@
                                     <div class="justify-center items-start mr-1">
                                         <button id="playButton" class="button-container button-56 play-button paused">
                                             <div class="button-face yellow-button">
-                                                <div class="bg-blue-800 rounded-full">
-                                                    <img class="button-icon play-icon p-2"
-                                                        src="https://sammakqoran.com/wp-content/themes/sammakquran/icons/play.svg"
-                                                        alt="پخش">
+                                                <div class="rounded-full border button-icon play-icon">
+                                                    <img class=" p-2" src="images/play.svg" alt="پخش">
                                                 </div>
-                                                <div class="bg-blue-800 rounded-full ">
-                                                    <img class="button-icon pause-icon p-2"
-                                                        src="https://sammakqoran.com/wp-content/themes/sammakquran/icons/pause.svg"
-                                                        alt="">
+                                                <div class="rounded-full border button-icon pause-icon">
+                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
                                                 </div>
                                             </div>
                                         </button>
                                     </div>
-                                    <div class="audio-timeline-container">
+                                    <div class="audio-timeline-container flex flex-col">
                                         <input class="audio-timeline" id="timelineController" type="range" min="0"
                                             max="100" value="0">
-                                        <div class="audio-timeline-face" id="timelineFace"></div>
+                                        <div class="flex justify-between">
+                                            <span id="audioCurrentTime" class="text-sm">0:00</span>
+                                            <span id="audioDuration" class="text-sm">0:00</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span id="audioCurrentTime" class="ml-1">0:00</span>
-                                    <span id="audioDuration" class="mr-1">0:00</span>
                                 </div>
                             </div>
                         </div>

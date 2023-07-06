@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: Vazirmatn FD;
+}
+
 /* switching between pause and play button */
 .play-button .pause-icon,
 .play-button.paused .play-icon {
@@ -13,3 +17,61 @@
     display: none;
 }
 
+
+/* custom audio player */
+
+.audio-timeline {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+.audio-timeline::-webkit-slider-runnable-track {
+    height: 12px;
+    background: #ccc;
+    border-radius: 12px;
+}
+
+/* Track: Mozilla Firefox */
+.audio-timeline::-moz-range-track {
+    height: 12px;
+    background: #ccc;
+    border-radius: 12px;
+}
+
+/* Thumb: webkit */
+.audio-timeline::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #f50;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px #f50;
+}
+
+
+/* Thumb: Firefox */
+.audio-timeline::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    background-color: #f50;
+    border-radius: 50%;
+    border: 1px solid #f50;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px #f50;
+}
+
+/* custom audio player end */

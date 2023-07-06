@@ -649,10 +649,6 @@ video {
           margin-inline-end: 0.5rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -730,8 +726,8 @@ video {
   width: 66.666667%;
 }
 
-.w-44 {
-  width: 11rem;
+.w-48 {
+  width: 12rem;
 }
 
 .w-full {
@@ -796,19 +792,9 @@ video {
   border-width: 1px;
 }
 
-.bg-blue-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -911,6 +897,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -923,6 +915,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -931,6 +927,10 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: Vazirmatn FD;
 }
 
 /* switching between pause and play button */
@@ -944,6 +944,68 @@ video {
 .play-button.paused .pause-icon {
   display: none;
 }
+
+/* custom audio player */
+
+.audio-timeline {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /*  slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+
+.audio-timeline::-webkit-slider-runnable-track {
+  height: 12px;
+  background: #ccc;
+  border-radius: 12px;
+}
+
+/* Track: Mozilla Firefox */
+
+.audio-timeline::-moz-range-track {
+  height: 12px;
+  background: #ccc;
+  border-radius: 12px;
+}
+
+/* Thumb: webkit */
+
+.audio-timeline::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #f50;
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px #f50;
+}
+
+/* Thumb: Firefox */
+
+.audio-timeline::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background-color: #f50;
+  border-radius: 50%;
+  border: 1px solid #f50;
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px #f50;
+}
+
+/* custom audio player end */
 
 @media (min-width: 768px) {
   .md\:container {
@@ -1012,4 +1074,3 @@ video {
     width: 50%;
   }
 }
-

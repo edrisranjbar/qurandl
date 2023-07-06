@@ -1,6 +1,7 @@
 'use strict';
 
-let audio = document.getElementById('audio');
+let audios = document.querySelectorAll(".best-recitation-audio");
+
 const ui = {
     play: 'playButton',
     seeker: 'timelineController',
@@ -15,7 +16,8 @@ function get(id) {
     return document.getElementById(id);
 }
 
-function togglePlay() {
+
+function togglePlay(audio) {
     if (audio.paused === false) {
         audio.pause();
     } else {
@@ -33,41 +35,30 @@ function formatTime(time) {
     return formattedTime;
 }
 
-function updateProgressBarFace() {
-    get(ui.seekerFace).style.width = `${get(ui.seeker).value}%`;
-}
-
-function updateProgressBar() {
-    let currentTimePercentage =
-        (audio.currentTime / audio.duration).toFixed(2) * 100;
-
-    get(ui.currentTime).innerText = formatTime(audio.currentTime);
-    get(ui.seeker).value = currentTimePercentage;
-
-    updateProgressBarFace();
-}
-
-function seek() {
+function seek(audio) {
     audio.currentTime = this.value * audio.duration / 100;
 }
 
-window.addEventListener('load', function () {
-    if (isNaN(audio.duration)) {
-        audio.addEventListener('play', function () {
+audios.forEach((audio) => {
+    window.addEventListener('load', function () {
+        if (isNaN(audio.duration)) {
+            audio.addEventListener('play', function () {
+                get(ui.duration).innerText = formatTime(audio.duration);
+            });
+        } else {
             get(ui.duration).innerText = formatTime(audio.duration);
-        });
-    } else {
-        get(ui.duration).innerText = formatTime(audio.duration);
-    }
+        }
+    });
+
+    get(ui.play).addEventListener('click', togglePlay(audio));
+
+    get(ui.seeker).addEventListener('input', seek(audio));
+
+    audio.addEventListener('play', function () {
+        get(ui.play).classList.remove('paused')
+    });
+    audio.addEventListener('pause', function () {
+        get(ui.play).classList.add('paused')
+    });
 });
 
-get(ui.play).addEventListener('click', togglePlay);
-
-get(ui.seeker).addEventListener('input', seek);
-audio.addEventListener('timeupdate', updateProgressBar);
-audio.addEventListener('play', function () {
-    get(ui.play).classList.remove('paused')
-});
-audio.addEventListener('pause', function () {
-    get(ui.play).classList.add('paused')
-});

@@ -49,7 +49,7 @@ audios.forEach((audio) => {
                 parent.querySelector(`#${ui.duration}`).innerText = formatTime(audio.duration);
             });
         } else {
-            // parent.querySelector(`#${ui.duration}`).innerText = formatTime(audio.duration);
+            parent.querySelector(`#${ui.duration}`).innerText = formatTime(audio.duration);
         }
     });
 

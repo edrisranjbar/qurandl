@@ -75,10 +75,10 @@
                                                     <div class="audio-timeline-container flex flex-col">
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex flex-row-reverse justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
+                                                        <div class="flex justify-between">
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -128,9 +128,9 @@
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
                                                         <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -180,9 +180,9 @@
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
                                                         <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -232,9 +232,9 @@
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
                                                         <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -262,7 +262,8 @@
                                     <div id="recitation-card-body" class="flex-col">
                                         <div class="audio-content">
                                             <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
                                                 <div class="flex flex-row-reverse items-center mt-2">
                                                     <div class="justify-center items-start mr-2">
                                                         <button id="playButton"
@@ -283,9 +284,9 @@
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
                                                         <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -313,7 +314,8 @@
                                     <div id="recitation-card-body" class="flex-col">
                                         <div class="audio-content">
                                             <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
                                                 <div class="flex flex-row-reverse items-center mt-2">
                                                     <div class="justify-center items-start mr-2">
                                                         <button id="playButton"
@@ -334,9 +336,216 @@
                                                         <input class="audio-timeline" id="timelineController"
                                                             type="range" min="0" max="100" value="0" dir="ltr">
                                                         <div class="flex justify-between">
+                                                            <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
                                                             <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="best-recitation-title" class="flex justify-start">
+                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row" id="recitation-card-footer">
+                                        <div class="w-12 aspect-square">
+                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
+                                        </div>
+                                        <label for="qari-profile"
+                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
+                                            راشد
+                                            العفاسی</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
+                                    id="recitation-card">
+                                    <div id="recitation-card-body" class="flex-col">
+                                        <div class="audio-content">
+                                            <div class="audio-controls">
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
+                                                <div class="flex flex-row-reverse items-center mt-2">
+                                                    <div class="justify-center items-start mr-2">
+                                                        <button id="playButton"
+                                                            class="button-container button-56 play-button paused">
+                                                            <div class="button-face yellow-button">
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon play-icon">
+                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
+                                                                </div>
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon pause-icon">
+                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <div class="audio-timeline-container flex flex-col">
+                                                        <input class="audio-timeline" id="timelineController"
+                                                            type="range" min="0" max="100" value="0" dir="ltr">
+                                                        <div class="flex justify-between">
                                                             <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="best-recitation-title" class="flex justify-start">
+                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row" id="recitation-card-footer">
+                                        <div class="w-12 aspect-square">
+                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
+                                        </div>
+                                        <label for="qari-profile"
+                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
+                                            راشد
+                                            العفاسی</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
+                                    id="recitation-card">
+                                    <div id="recitation-card-body" class="flex-col">
+                                        <div class="audio-content">
+                                            <div class="audio-controls">
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
+                                                <div class="flex flex-row-reverse items-center mt-2">
+                                                    <div class="justify-center items-start mr-2">
+                                                        <button id="playButton"
+                                                            class="button-container button-56 play-button paused">
+                                                            <div class="button-face yellow-button">
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon play-icon">
+                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
+                                                                </div>
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon pause-icon">
+                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <div class="audio-timeline-container flex flex-col">
+                                                        <input class="audio-timeline" id="timelineController"
+                                                            type="range" min="0" max="100" value="0" dir="ltr">
+                                                        <div class="flex justify-between">
+                                                            <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="best-recitation-title" class="flex justify-start">
+                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row" id="recitation-card-footer">
+                                        <div class="w-12 aspect-square">
+                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
+                                        </div>
+                                        <label for="qari-profile"
+                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
+                                            راشد
+                                            العفاسی</label>
+                                    </div>
+                                </div>
+                            </li>                            <li class="splide__slide">
+                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
+                                    id="recitation-card">
+                                    <div id="recitation-card-body" class="flex-col">
+                                        <div class="audio-content">
+                                            <div class="audio-controls">
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
+                                                <div class="flex flex-row-reverse items-center mt-2">
+                                                    <div class="justify-center items-start mr-2">
+                                                        <button id="playButton"
+                                                            class="button-container button-56 play-button paused">
+                                                            <div class="button-face yellow-button">
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon play-icon">
+                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
+                                                                </div>
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon pause-icon">
+                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <div class="audio-timeline-container flex flex-col">
+                                                        <input class="audio-timeline" id="timelineController"
+                                                            type="range" min="0" max="100" value="0" dir="ltr">
+                                                        <div class="flex justify-between">
+                                                            <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="best-recitation-title" class="flex justify-start">
+                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row" id="recitation-card-footer">
+                                        <div class="w-12 aspect-square">
+                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
+                                        </div>
+                                        <label for="qari-profile"
+                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
+                                            راشد
+                                            العفاسی</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
+                                    id="recitation-card">
+                                    <div id="recitation-card-body" class="flex-col">
+                                        <div class="audio-content">
+                                            <div class="audio-controls">
+                                                <audio src="audios/001.mp3" class="best-recitation-audio"
+                                                    preload="metadata"></audio>
+                                                <div class="flex flex-row-reverse items-center mt-2">
+                                                    <div class="justify-center items-start mr-2">
+                                                        <button id="playButton"
+                                                            class="button-container button-56 play-button paused">
+                                                            <div class="button-face yellow-button">
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon play-icon">
+                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
+                                                                </div>
+                                                                <div
+                                                                    class="rounded-full border border-primary button-icon pause-icon">
+                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                    <div class="audio-timeline-container flex flex-col">
+                                                        <input class="audio-timeline" id="timelineController"
+                                                            type="range" min="0" max="100" value="0" dir="ltr">
+                                                        <div class="flex justify-between">
+                                                            <span id="audioDuration"
+                                                                class="text-sm text-dark-primary">0:00</span>
+                                                            <span id="audioCurrentTime"
                                                                 class="text-sm text-dark-primary">0:00</span>
                                                         </div>
                                                     </div>
@@ -370,261 +579,6 @@
                 <section id="best-qaris-slider" class="splide" aria-label="Splide Basic HTML Example">
                     <div class="splide__track px-32 pb-32">
                         <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
-                                    id="recitation-card">
-                                    <div id="recitation-card-body" class="flex-col">
-                                        <div class="audio-content">
-                                            <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                                <div class="flex flex-row-reverse items-center mt-2">
-                                                    <div class="justify-center items-start mr-2">
-                                                        <button id="playButton"
-                                                            class="button-container button-56 play-button paused">
-                                                            <div class="button-face yellow-button">
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon play-icon">
-                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
-                                                                </div>
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon pause-icon">
-                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <div class="audio-timeline-container flex flex-col">
-                                                        <input class="audio-timeline" id="timelineController"
-                                                            type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                            <span id="audioDuration"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="best-recitation-title" class="flex justify-start">
-                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-row" id="recitation-card-footer">
-                                        <div class="w-12 aspect-square">
-                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
-                                        </div>
-                                        <label for="qari-profile"
-                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
-                                            راشد
-                                            العفاسی</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
-                                    id="recitation-card">
-                                    <div id="recitation-card-body" class="flex-col">
-                                        <div class="audio-content">
-                                            <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                                <div class="flex flex-row-reverse items-center mt-2">
-                                                    <div class="justify-center items-start mr-2">
-                                                        <button id="playButton"
-                                                            class="button-container button-56 play-button paused">
-                                                            <div class="button-face yellow-button">
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon play-icon">
-                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
-                                                                </div>
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon pause-icon">
-                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <div class="audio-timeline-container flex flex-col">
-                                                        <input class="audio-timeline" id="timelineController"
-                                                            type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                            <span id="audioDuration"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="best-recitation-title" class="flex justify-start">
-                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-row" id="recitation-card-footer">
-                                        <div class="w-12 aspect-square">
-                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
-                                        </div>
-                                        <label for="qari-profile"
-                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
-                                            راشد
-                                            العفاسی</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
-                                    id="recitation-card">
-                                    <div id="recitation-card-body" class="flex-col">
-                                        <div class="audio-content">
-                                            <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                                <div class="flex flex-row-reverse items-center mt-2">
-                                                    <div class="justify-center items-start mr-2">
-                                                        <button id="playButton"
-                                                            class="button-container button-56 play-button paused">
-                                                            <div class="button-face yellow-button">
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon play-icon">
-                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
-                                                                </div>
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon pause-icon">
-                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <div class="audio-timeline-container flex flex-col">
-                                                        <input class="audio-timeline" id="timelineController"
-                                                            type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                            <span id="audioDuration"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="best-recitation-title" class="flex justify-start">
-                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-row" id="recitation-card-footer">
-                                        <div class="w-12 aspect-square">
-                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
-                                        </div>
-                                        <label for="qari-profile"
-                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
-                                            راشد
-                                            العفاسی</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
-                                    id="recitation-card">
-                                    <div id="recitation-card-body" class="flex-col">
-                                        <div class="audio-content">
-                                            <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                                <div class="flex flex-row-reverse items-center mt-2">
-                                                    <div class="justify-center items-start mr-2">
-                                                        <button id="playButton"
-                                                            class="button-container button-56 play-button paused">
-                                                            <div class="button-face yellow-button">
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon play-icon">
-                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
-                                                                </div>
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon pause-icon">
-                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <div class="audio-timeline-container flex flex-col">
-                                                        <input class="audio-timeline" id="timelineController"
-                                                            type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                            <span id="audioDuration"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="best-recitation-title" class="flex justify-start">
-                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-row" id="recitation-card-footer">
-                                        <div class="w-12 aspect-square">
-                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
-                                        </div>
-                                        <label for="qari-profile"
-                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
-                                            راشد
-                                            العفاسی</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
-                                    id="recitation-card">
-                                    <div id="recitation-card-body" class="flex-col">
-                                        <div class="audio-content">
-                                            <div class="audio-controls">
-                                                <audio src="audios/001.mp3" id="audio" preload="metadata"></audio>
-                                                <div class="flex flex-row-reverse items-center mt-2">
-                                                    <div class="justify-center items-start mr-2">
-                                                        <button id="playButton"
-                                                            class="button-container button-56 play-button paused">
-                                                            <div class="button-face yellow-button">
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon play-icon">
-                                                                    <img class="p-2" src="images/play.svg" alt="پخش">
-                                                                </div>
-                                                                <div
-                                                                    class="rounded-full border border-primary button-icon pause-icon">
-                                                                    <img class=" p-2" src="images/pause.svg" alt="توقف">
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <div class="audio-timeline-container flex flex-col">
-                                                        <input class="audio-timeline" id="timelineController"
-                                                            type="range" min="0" max="100" value="0" dir="ltr">
-                                                        <div class="flex justify-between">
-                                                            <span id="audioCurrentTime"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                            <span id="audioDuration"
-                                                                class="text-sm text-dark-primary">0:00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="best-recitation-title" class="flex justify-start">
-                                            <h3 class="font-medium mt-7 text-dark-primary">سوره بقره آیه ۱۱۹ تا ۱۲۵</h3>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-row" id="recitation-card-footer">
-                                        <div class="w-12 aspect-square">
-                                            <img id="qari-profile" class="rounded-lg" src="images/alaffasy.jpeg" alt="">
-                                        </div>
-                                        <label for="qari-profile"
-                                            class="text-sm flex items-center text-dark-primary mr-2">مشاری
-                                            راشد
-                                            العفاسی</label>
-                                    </div>
-                                </div>
-                            </li>
                             <li class="splide__slide">
                                 <div class="aspect-square w-52 rounded-lg flex flex-col justify-between p-2 bg-light shadow-md border"
                                     id="recitation-card">

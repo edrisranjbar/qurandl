@@ -1,20 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('.splide#best-recitations-slider', {
-        drag: 'free',
-        perPage: '4',
-        pagination: false,
+        type: 'loop',
+        perPage: 'auto',
         direction: 'rtl',
-        gap: '16px',
-        updateOnMove: true,
-        mediaQuery: 'min',
+        gap: '42px',
+        arrows: false,
+        pagination: false,
+        perMove: 1,
+        snap: true,
+        omitEnd: true,
         breakpoints: {
-            672: {
-                perPage: 6,
-            },
-            1024: {
-                perPage: 4,
-            },
-        },
+            
+        }
+
     });
     splide.mount();
 });

@@ -41,14 +41,14 @@ body {
 
 /* Track: webkit browsers */
 .audio-timeline::-webkit-slider-runnable-track {
-    height: 12px;
+    height: 14px;
     background: #ccc;
     border-radius: 12px;
 }
 
 /* Track: Mozilla Firefox */
 .audio-timeline::-moz-range-track {
-    height: 12px;
+    height: 14px;
     background: #ccc;
     border-radius: 12px;
 }
@@ -59,8 +59,8 @@ body {
     -webkit-appearance: none;
     appearance: none;
     /* creating a custom design */
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     background-color: #fff;
     border-radius: 50%;
     border: 2px solid var(--primary);
@@ -71,8 +71,8 @@ body {
 
 /* Thumb: Firefox */
 .audio-timeline::-moz-range-thumb {
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     background-color: var(--primary);
     border-radius: 50%;
     border: 1px solid var(--primary);

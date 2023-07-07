@@ -12,11 +12,6 @@ const ui = {
     forward: 'forwardButton',
 }
 
-function get(id) {
-    return document.getElementById(id);
-}
-
-
 function togglePlay(audio) {
     if (audio.paused === false) {
         audio.pause();
@@ -35,30 +30,46 @@ function formatTime(time) {
     return formattedTime;
 }
 
-function seek(audio) {
-    audio.currentTime = this.value * audio.duration / 100;
+function seek(audio, element) {
+    audio.currentTime = element.value * audio.duration / 100;
+}
+
+function updateProgressBar(audio) {
+    let currentTimePercentage =
+        (audio.currentTime / audio.duration).toFixed(2) * 100;
+    audio.parentElement.querySelector(`#${ui.currentTime}`).innerText = formatTime(audio.currentTime);
+    audio.parentElement.querySelector(`#${ui.seeker}`).value = currentTimePercentage;
 }
 
 audios.forEach((audio) => {
     window.addEventListener('load', function () {
         if (isNaN(audio.duration)) {
-            audio.addEventListener('play', function () {
-                get(ui.duration).innerText = formatTime(audio.duration);
+            audio.addEventListener('play', function (event) {
+                let parent = event.target.parentElement;
+                parent.querySelector(`#${ui.duration}`).innerText = formatTime(audio.duration);
             });
         } else {
-            get(ui.duration).innerText = formatTime(audio.duration);
+            // parent.querySelector(`#${ui.duration}`).innerText = formatTime(audio.duration);
         }
     });
 
-    get(ui.play).addEventListener('click', togglePlay(audio));
-
-    get(ui.seeker).addEventListener('input', seek(audio));
-
-    audio.addEventListener('play', function () {
-        get(ui.play).classList.remove('paused')
+    let parent = audio.parentElement;
+    parent.querySelector(`#${ui.play}`).addEventListener('click', () => {
+        togglePlay(audio);
     });
-    audio.addEventListener('pause', function () {
-        get(ui.play).classList.add('paused')
+    parent.querySelector(`#${ui.seeker}`).addEventListener('input', (e) => {
+        seek(audio, e.target);
+    });
+    audio.addEventListener('timeupdate', (e) => {
+        updateProgressBar(audio);
+    });
+    audio.addEventListener('play', function (e) {
+        let parent = e.target.parentElement;
+        parent.querySelector(`#${ui.play}`).classList.remove('paused');
+    });
+    audio.addEventListener('pause', function (e) {
+        let parent = e.target.parentElement;
+        parent.querySelector(`#${ui.play}`).classList.add('paused');
     });
 });
 

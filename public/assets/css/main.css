@@ -649,6 +649,10 @@ video {
           margin-inline-end: 0.5rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -694,12 +698,12 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-60 {
-  margin-top: 15rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mt-60 {
+  margin-top: 15rem;
 }
 
 .block {
@@ -734,6 +738,10 @@ video {
   width: 66.666667%;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -744,6 +752,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .flex-row {
@@ -821,6 +833,11 @@ video {
 .bg-light {
   --tw-bg-opacity: 1;
   background-color: rgb(246 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-light-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 205 196 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -911,8 +928,8 @@ video {
   font-weight: 700;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-dark-primary {
@@ -1019,7 +1036,7 @@ body {
 /* Track: webkit browsers */
 
 .audio-timeline::-webkit-slider-runnable-track {
-  height: 14px;
+  height: 12px;
   background: #ccc;
   border-radius: 12px;
 }
@@ -1027,7 +1044,7 @@ body {
 /* Track: Mozilla Firefox */
 
 .audio-timeline::-moz-range-track {
-  height: 14px;
+  height: 12px;
   background: #ccc;
   border-radius: 12px;
 }
@@ -1039,8 +1056,8 @@ body {
   -webkit-appearance: none;
   appearance: none;
   /* creating a custom design */
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid var(--primary);
@@ -1051,8 +1068,8 @@ body {
 /* Thumb: Firefox */
 
 .audio-timeline::-moz-range-thumb {
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   background-color: var(--primary);
   border-radius: 50%;
   border: 1px solid var(--primary);
@@ -1134,12 +1151,6 @@ body {
 .peer:focus ~ .peer-focus\:text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  .sm\:font-bold {
-    font-weight: 700;
-  }
 }
 
 @media (min-width: 768px) {

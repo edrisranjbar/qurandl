@@ -34,11 +34,16 @@
     </header>
     <main>
         <div class="container flex flex-col items-center mx-auto">
-            <div class="flex flex-row-reverse items-center w-2/3 lg:w-1/2">
-                <input placeholder="جستجو" dir="rtl" type="text"
-                    class="border bg-gray-100 rounded h-9 p-5 pb-7 pr-10 w-full focus:bg-white transition-all ease-in-out focus:shadow focus:outline-0 peer">
-                <i class="fa-solid fa-search text-gray-400 mr-3 text-xl absolute text-center peer-focus:text-black"></i>
+
+            <div class="w-2/3 lg:w-1/2 flex flex-col rounded-lg">
+                <div id="" class="flex flex-row-reverse items-center bg-slate-100 border rounded-lg w-full px-2 focus:bg-white">
+                    <input placeholder="جستجو" dir="rtl" type="text"
+                        class=" h-11 pr-7 bg-slate-100 focus:bg-white focus:border-b w-full focus:border-b-light-primary transition-all ease-in-out focus:outline-0 peer">
+                    <i
+                        class="fa-solid fa-search mr-1 text-primary  text-xl absolute text-center  peer-focus:text-primary"></i>
+                </div>
             </div>
+
             <div class="mt-60 w-full" id="best-reciatations">
                 <div class="reel-desc">
                     <h2 class="text-2xl text-dark-primary text-right font-bold">بهترین قرائت های خاشعه</h2>
@@ -377,7 +382,7 @@
             </div>
             <div class="w-full" id="best-qaris">
                 <div class="reel-desc">
-                    <h2 class="text-2xl text-dark-primary text-right font-bold">بهترین قاری ها</h2>
+                    <h2 class="text-2xl text-dark-primary text-right font-bold">محبوب قاری ها</h2>
                     <div class="splide__arrows"></div>
                 </div>
                 <section id="best-qaris-slider" class="splide" aria-label="Splide Basic HTML Example">

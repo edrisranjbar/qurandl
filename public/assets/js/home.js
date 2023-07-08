@@ -73,3 +73,25 @@ audios.forEach((audio) => {
     });
 });
 
+
+
+
+
+const searchInput = document.querySelector('#search-input')
+const searchInputParent = document.querySelector('#search-input-wrapper')
+
+
+// todo: expand searchbox function
+
+function activateSIparent() {
+    searchInputParent.style.backgroundColor = "white"
+}
+
+function activateSearchBox() {
+    activateSIparent()
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    searchInput.addEventListener('focusin', activateSearchBox())
+})

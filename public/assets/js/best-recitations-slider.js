@@ -4,15 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage: 'auto',
         direction: 'rtl',
         gap: '42px',
-        arrows: false,
         pagination: false,
+        arrows: false,
         perMove: 1,
         snap: true,
         omitEnd: true,
-        breakpoints: {
-            
-        }
-
+        padding: {right: '20px'}
     });
     splide.mount();
 });

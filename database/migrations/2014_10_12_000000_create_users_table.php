@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->enum('status', ['Active', 'Inactive']);
+            $table->boolean('isActive')->default(1);
             $table->timestamps();
         });
     }

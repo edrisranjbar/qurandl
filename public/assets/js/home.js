@@ -78,20 +78,25 @@ audios.forEach((audio) => {
 
 
 const searchInput = document.querySelector('#search-input')
-const searchInputParent = document.querySelector('#search-input-wrapper')
+const searchResults = document.querySelector('#search-results')
 
-
-// todo: expand searchbox function
-
-function activateSIparent() {
-    searchInputParent.style.backgroundColor = "white"
-}
 
 function activateSearchBox() {
-    activateSIparent()
+    searchResults.classList.remove("hidden")
+    searchResults.classList.add("block")
 }
 
+function deActivateSearchBox() {
+    searchResults.classList.remove("block")
+    searchResults.classList.add("hidden")
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    searchInput.addEventListener('focusin', activateSearchBox())
+document.addEventListener("DOMContentLoaded", () => {
+    searchInput.addEventListener("focusin", () => {
+        activateSearchBox();
+    })
+    searchInput.addEventListener("focusout", () => {
+        deActivateSearchBox();
+    })
+
 })

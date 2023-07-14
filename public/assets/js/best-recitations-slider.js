@@ -7,9 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: false,
         arrows: false,
         perMove: 1,
-        snap: true,
         omitEnd: true,
-        padding: {right: '20px'}
+        padding: { right: '20px' }
     });
     splide.mount();
 });

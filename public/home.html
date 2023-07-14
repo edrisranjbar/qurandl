@@ -36,17 +36,26 @@
         <div class="w-2/3 md:w-1/2 mx-auto">
             <div class="flex flex-row-reverse w-full items-center">
                 <input id="search-input" placeholder="جستجو" dir="rtl" type="text"
-                    class="w-full h-14 pr-10 bg-light border shadow-lg transition-all ease-in-out focus:outline-0 rounded-lg peer">
+                    class="w-full h-12 md:h-14 pr-10 bg-light border shadow-lg transition-all ease-in-out focus:outline-0 rounded-lg peer">
                 <i
                     class="fa-solid fa-search mr-3  text-primary  text-xl absolute text-center  peer-focus:text-primary"></i>
             </div>
 
-            <div id="search-results" dir="rtl" class="text-right mt-4 hidden max-h-20">
+            <div id="search-results" dir="rtl" class="text-right mt-3 hidden max-h-20">
                 <ul class="flex flex-col rounded-lg shadow-lg border bg-light">
                     <!-- <li class="h-12 flex items-center pr-4 cursor-pointer">جستجوی شما یافت نشد</li> -->
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">مشاری راشد العفاسی</li>
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">ذکوان سماک</li>
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">عبدالستار</li>
+                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
+                        <i class="fa fa-user ml-2 text-primary"></i>
+                        <span>مشاری راشد العفاسي</span>
+                    </li>
+                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
+                        <i class="fa fa-user ml-2 text-primary"></i>
+                        <span>سعد الغامدی</span>
+                    </li>
+                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
+                        <i class="fa fa-music ml-2 text-primary"></i>
+                        <span>سوره بقره آیات ۱۰ تا ۲۵</span>
+                    </li>
                 </ul>
             </div>
         </div>

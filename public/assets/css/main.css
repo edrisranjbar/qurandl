@@ -710,6 +710,10 @@ video {
   margin-top: 15rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1153,6 +1157,10 @@ body {
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+
+  .md\:h-14 {
+    height: 3.5rem;
   }
 
   .md\:w-1\/2 {

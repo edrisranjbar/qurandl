@@ -32,14 +32,13 @@
         </div>
     </header>
     <main>
-        <div class="w-2/3 md:w-1/2 mx-auto mb-28">
-            <div class="flex w-full items-center">
+        <div class="w-5/6 md:w-1/2 mx-auto mb-28">
+            <div class="flex w-full items-center mb-12">
                 <input id="search-input" placeholder="جستجو" dir="rtl" type="text"
                     class="w-full h-12 md:h-14 pr-10 bg-light border shadow-lg transition-all ease-in-out focus:outline-0 rounded-lg peer">
                 <i
                     class="fa-solid fa-search mr-3  text-primary  text-xl absolute text-center  peer-focus:text-primary"></i>
             </div>
-
             <div id="search-results" dir="rtl" class="text-right mt-3 hidden max-h-20">
                 <ul class="flex flex-col rounded-lg shadow-lg border bg-light">
                     <!-- <li class="h-12 flex items-center pr-4 cursor-pointer">جستجوی شما یافت نشد</li> -->
@@ -58,32 +57,22 @@
                 </ul>
             </div>
 
-
-        </div>
-        <div id="qari-cards-wrapper flex justify-center items-center">
-            <div id="qari-card" class="bg-light-primary shadow-lg rounded py-2 flex items-center">
-                <div class="flex items-center">
-                    <div class="w-12 aspect-square">
-                        <img id="qari-profile" class="rounded-full" src="images/alaffasy.jpeg" alt="">
+            <div id="qari-cards-wrapper" class="flex flex-col gap-2 ">
+                <div id="qari-card"
+                    class="bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="text-xl text-dark-primary">مشاری راشد العفاسی</h2>
                     </div>
-                    <span id="qari-name">مشاری راشد العفاسی</span>
+                    <div>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
                 </div>
             </div>
-            <div id="qari-card" class="bg-light shadow rounded py-2 ">
-                <div class="w-12 aspect-square">
-                    <img id="qari-profile" class="rounded-full" src="images/alaffasy.jpeg" alt="">
-                </div>
-            </div>
-            <div id="qari-card" class="bg-light shadow rounded py-2 ">
-                <div class="w-12 aspect-square">
-                    <img id="qari-profile" class="rounded-full" src="images/alaffasy.jpeg" alt="">
-                </div>
-            </div>
-            <div id="qari-card" class="bg-light shadow rounded py-2 ">
-                <div class="w-12 aspect-square">
-                    <img id="qari-profile" class="rounded-full" src="images/alaffasy.jpeg" alt="">
-                </div>
-            </div>
+        </div>
         </div>
 
     </main>

@@ -1,5 +1,6 @@
 'use strict';
 
+// start of custom audio player
 let audios = document.querySelectorAll(".best-recitation-audio");
 
 const ui = {
@@ -72,11 +73,11 @@ audios.forEach((audio) => {
         parent.querySelector(`#${ui.play}`).classList.add('paused');
     });
 });
+// end of custom audio player
 
 
 
-
-
+// start of searchbox
 const searchInput = document.querySelector('#search-input')
 const searchResults = document.querySelector('#search-results')
 
@@ -100,3 +101,32 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 })
+
+
+// end of serach box
+
+
+// start of hamburger menu
+const hamburgerMenuToggle = document.querySelector('button[data-collapse-toggle="hamburger-menu"]')
+const hamburgerMenu = document.getElementById('hamburger-menu')
+function toggleHamburgerMenu() {
+    if (hamburgerMenuToggle.getAttribute("aria-expanded" === "true")) {
+        hamburgerMenu.classList.remove("hidden")
+    }
+}
+
+
+hamburgerMenuToggle.addEventListener('click', () => {
+    if (hamburgerMenuToggle.getAttribute("aria-expanded") === "false") {
+        hamburgerMenuToggle.setAttribute("aria-expanded", "true")
+        hamburgerMenu.classList.remove("hidden")
+    }
+    else {
+        hamburgerMenuToggle.setAttribute("aria-expanded", "false")
+        hamburgerMenu.classList.add("hidden")
+    }
+})
+
+
+
+// end of hambure menu

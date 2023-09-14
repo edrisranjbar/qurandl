@@ -12,66 +12,182 @@
 </head>
 
 <body class="font" dir="rtl">
-    <header class="shadow-md mb-12 bg-light">
-        <div class="relative md:container mx-auto p-4">
-            <div class="flex items-center justify-between">
-                <div id="logo-container" class="pt-2">
-                    <a href="#" class="flex flex-row-reverse">
-                        <img class="ml-3" src="images/koran.png" alt="logo">
-                        <span>قرآن دانلود</span>
-                    </a>
+    <header class="mb-24">
+        <nav class="bg-white border-gray-20 fixed top-0  inset-x-0 z-50 shadow">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center">
+                    <img src="images/koran.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap ">قرآن دانلود</span>
+                </a>
+                <button data-collapse-toggle="hamburger-menu" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="hamburger-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto text-right" id="hamburger-menu" dir="rtl">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white md:shadow-none">
+                        <li>
+                            <!-- TODO: fix the space-x-8 not applying to first child  with a way other manually giving it margin left -->
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4  bg-light-primary rounded md:bg-transparent md:text-primary md:ml-8 md:p-0"
+                                aria-current="page">صفحه نخست</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">قاری
+                                ها</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">تلاوات
+                                خاشعه</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">درباره
+                                ما</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <nav class="hidden md:flex md:flex-row-reverse space-x-6">
-                    <a href="#home" class="ml-6">صفحه اصلی</a>
-                    <a href="#qaris">قاری ها</a>
-                    <a href="#best-recitations">تلاوات خاشعه</a>
-                    <a href="#about-us">درباره ما</a>
-                </nav>
             </div>
-        </div>
+        </nav>
+
     </header>
     <main>
         <div class="w-5/6 md:w-1/2 mx-auto mb-28">
-            <div class="flex w-full items-center mb-12">
+            <div class="flex w-full items-center mb-8">
                 <input id="search-input" placeholder="جستجو" dir="rtl" type="text"
                     class="w-full h-12 md:h-14 pr-10 bg-light border shadow-lg transition-all ease-in-out focus:outline-0 rounded-lg peer">
                 <i
                     class="fa-solid fa-search mr-3  text-primary  text-xl absolute text-center  peer-focus:text-primary"></i>
             </div>
-            <div id="search-results" dir="rtl" class="text-right mt-3 hidden max-h-20">
-                <ul class="flex flex-col rounded-lg shadow-lg border bg-light">
-                    <!-- <li class="h-12 flex items-center pr-4 cursor-pointer">جستجوی شما یافت نشد</li> -->
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
-                        <i class="fa fa-user ml-2 text-primary"></i>
-                        <span>مشاری راشد العفاسي</span>
-                    </li>
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
-                        <i class="fa fa-user ml-2 text-primary"></i>
-                        <span>سعد الغامدی</span>
-                    </li>
-                    <li class="hover:bg-slate-100 h-12 flex items-center pr-4 cursor-pointer">
-                        <i class="fa fa-music ml-2 text-primary"></i>
-                        <span>سوره بقره آیات ۱۰ تا ۲۵</span>
-                    </li>
-                </ul>
-            </div>
 
-            <div id="qari-cards-wrapper" class="flex flex-col gap-2 ">
-                <div id="qari-card"
-                    class="bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3">
+            <div id="qari-cards-wrapper"
+                class="flex flex-col gap-4 bg-light border rounded shadow p-4 overflow-x-auto max-h-[70vh] ">
+                <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
                     <div class="flex items-center gap-2">
                         <div class="w-12 aspect-square">
                             <img id="qari-profile" class="rounded-full border border-dark-primary"
                                 src="images/alaffasy.jpeg" alt="">
                         </div>
-                        <h2 class="md:text-xl text-dark-primary">مشاری راشد العفاسی</h2>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
                     </div>
                     <div class="flex items-center gap-1">
                         <small>۳۳۵</small>
                         <i class="fas fa-heart text-red-600"></i>
                     </div>
-                </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a> <a href="qaris.html" id="qari-card"
+                    class="text-dark-primary bg-light-primary shadow-lg rounded py-2 flex justify-between items-center px-3 hover:bg-primary hover:text-light">
+                    <div class="flex items-center gap-2">
+                        <div class="w-12 aspect-square">
+                            <img id="qari-profile" class="rounded-full border border-dark-primary"
+                                src="images/alaffasy.jpeg" alt="">
+                        </div>
+                        <h2 class="sm:text-xl">مشاری راشد العفاسی</h2>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <small>۳۳۵</small>
+                        <i class="fas fa-heart text-red-600"></i>
+                    </div>
+                </a>
             </div>
         </div>
         </div>
@@ -79,5 +195,16 @@
     </main>
 
 </body>
+
+<script>
+    const card = document.getElementById("qari-card")
+    const cardsWrapper = document.getElementById("qari-cards-wrapper")
+    function multiply(card, wrapper) {
+
+        for (let i = 0; i < 10; i++) {
+            cardsWrapper.appendChild(card.cloneNode())
+        }
+    }
+</script>
 
 </html>

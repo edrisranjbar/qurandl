@@ -747,6 +747,14 @@ video {
   margin-top: 9rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -789,6 +797,38 @@ video {
 
 .max-h-20 {
   max-height: 5rem;
+}
+
+.max-h-60 {
+  max-height: 15rem;
+}
+
+.max-h-48 {
+  max-height: 12rem;
+}
+
+.max-h-10 {
+  max-height: 2.5rem;
+}
+
+.max-h-2 {
+  max-height: 0.5rem;
+}
+
+.max-h-80 {
+  max-height: 20rem;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[70\%\] {
+  max-height: 70%;
+}
+
+.max-h-\[70vh\] {
+  max-height: 70vh;
 }
 
 .w-10 {
@@ -879,6 +919,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -895,8 +939,20 @@ video {
   align-self: center;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .whitespace-nowrap {
@@ -947,6 +1003,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 108 103 / var(--tw-bg-opacity));
 }
 
 .p-0 {
@@ -1272,6 +1333,21 @@ body {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 108 103 / var(--tw-bg-opacity));
+}
+
+.hover\:text-light:hover {
+  --tw-text-opacity: 1;
+  color: rgb(246 255 255 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1297,6 +1373,13 @@ body {
   color: rgb(0 108 103 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:ml-8 {
     margin-left: 2rem;
@@ -1320,6 +1403,14 @@ body {
 
   .md\:h-14 {
     height: 3.5rem;
+  }
+
+  .md\:max-h-\[70vh\] {
+    max-height: 70vh;
+  }
+
+  .md\:max-h-none {
+    max-height: none;
   }
 
   .md\:w-1\/2 {
@@ -1355,6 +1446,11 @@ body {
   .md\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .md\:bg-light {
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 255 255 / var(--tw-bg-opacity));
   }
 
   .md\:p-0 {

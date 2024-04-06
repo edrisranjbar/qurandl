@@ -1,46 +1,66 @@
 @section('title', 'ورود')
 @extends('layouts.login')
 @section('content')
-    <div class="login-card card o-hidden border-0 shadow-lg my-5 mx-auto rounded">
-        <div class="card-body p-0">
-            <div class="col-lg-12">
-                <div class="p-5">
-                    <div class="text-center">
-                        <h1 class="font-weight-bold h2 text-gray-900 mb-5 mt-2">ورود مدیران</h1>
-                        @if (isset($message))
-                            <div class="alert alert-success">{{ $message }}</div>
+<section class="vh-100 bg-gradient-info">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card rounded-4 w-75 mx-auto">
+                    <div class="card-body px-4 px-lg-5 text-black">
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible d-flex align-items-center fade show"
+                                 role="alert">
+                                <i class="bi-check-circle-fill"></i>
+                                <div>
+                                    {{ session('success') }}
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
                         @endif
+                        <form method="post" action="{{ url('admin/login') }}" class="needs-validation"
+                              novalidate>
+                            @csrf
+                            <h1 class="h3 mb-4 fw-normal text-center">
+                                لطفا وارد شوید
+                            </h1>
+                            @if (session('error'))
+                                <div class="alert alert-danger alert-dismissible d-flex align-items-center fade show"
+                                     role="alert">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+                            <div class="form-group">
+                                <label for="username" class="float-right">نام کاربری</label>
+                                <input name="username" type="username" class="form-control" id="username"
+                                       placeholder="نام کاربری" value="{{ old('username') }}" required>
+                                <div class="invalid-feedback text-right">
+                                    لطفا نام کاربری معتبری وارد کنید
+                                </div>
+                                @error('username')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="float-right">رمز عبور</label>
+                                <input name="password" type="password" class="form-control" id="password"
+                                       placeholder="رمز عبور" required>
+                                <div class="invalid-feedback text-right mb-4">
+                                    لطفا رمز عبور معتبری وارد کنید
+                                </div>
+                                @error('password')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary" type="submit">
+                                ورود
+                            </button>
+                        </form>
                     </div>
-                    @if ($errors->any())
-                        @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger mb-2">{{ $error }}</div>
-                        @endforeach
-                    @endif
-                    <form class="user needs-validation" name="login-form" method="post" action="{{ url('admin/login') }}"
-                        novalidate>
-                        @csrf
-                        <div class="form-group">
-                            <input name="username" class="form-control form-control-user" value="{{ old('username') }}"
-                                placeholder="نام کاربری" required>
-                            <div class="invalid-feedback text-right">
-                                لطفا نام کاربری معتبری وارد کنید
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control form-control-user"
-                                placeholder="رمز عبور" minlength="4" required>
-                            <div class="invalid-feedback text-right mb-4">
-                                لطفا رمز عبور معتبری وارد کنید
-                            </div>
-
-                        </div>
-                        <input class="btn btn-primary btn-user btn-block g-recaptcha" data-sitekey="reCAPTCHA_site_key"
-                            data-callback='onSubmit' type="submit" name="login-btn" value="ورود">
-                    </form>
                 </div>
             </div>
         </div>
     </div>
+</section>
 @stop
 
 <script src="{{ asset('assets\js\login.js') }}" defer></script>

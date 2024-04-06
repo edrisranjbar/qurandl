@@ -9,12 +9,12 @@ class AdminSeeder extends Seeder
 {
     public function run()
     {
-        $admin = Admin::factory()->create([
+        Admin::factory()->create([
             'first_name' => 'ادریس',
             'last_name' => 'رنجبر',
             'username' => 'edris',
             'mobile' => '09380342995',
-            'password' => '11100077',
+            'password' => 'password',
             'is_superuser' => true
         ]);
     }

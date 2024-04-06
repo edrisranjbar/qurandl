@@ -1,12 +1,12 @@
 # Quran Download
   <a href="https://github.com/edrisranjbar/qurandl">
-    <img src="http://qurandl.com/wp-content/uploads/2023/03/qurandl.png" alt="Logo" width="200px" align="center">
+    <img src="https://qurandl.com/wp-content/uploads/2023/03/qurandl.png" alt="Qurandl" width="200px" align="center">
   </a>
 <p>
 Welcome to Quran Download, an open-source project built with Laravel that aims to make Quran recitations accessible for everyone.
-this project is fully opensource and none-profit and it's being maintained and managed by [Itadbeer](!https://itadbeer.com) developer team for **Sahahbahq**.
+this project is fully opensource, none-profit, and it's being maintained and managed by [Itadbeer](!https://itadbeer.com) developer team for **Sahahbahq**.
 </p>
-<p align="center">
+<div align="center">
   <h3 align="center">Access Quran recitations from everywhere with a click!</h3>
   <p align="center">
     The best specialized Quran recitation platform
@@ -21,7 +21,7 @@ this project is fully opensource and none-profit and it's being maintained and m
     .
     <a href="https://github.com/edrisranjbar/qurandl/issues">Request Feature</a>
   </p>
-</p>
+</div>
 
 ![Downloads](https://img.shields.io/github/downloads/edrisranjbar/qurandl/total) ![Contributors](https://img.shields.io/github/contributors/edrisranjbar/qurandl?color=dark-green) ![Forks](https://img.shields.io/github/forks/edrisranjbar/qurandl?style=social) ![Stargazers](https://img.shields.io/github/stars/edrisranjbar/qurandl?style=social) ![Issues](https://img.shields.io/github/issues/edrisranjbar/qurandl) ![License](https://img.shields.io/github/license/edrisranjbar/qurandl) 
 
@@ -47,6 +47,7 @@ To run Quran Download locally, you need to have PHP and Composer installed on yo
 4. Create a new `.env` file by copying `.env.example` file with the following command.
 * In Linux : `cp .env.example .env`
 * In windows : `COPY .env.example .env`
+5. Generate a new applicatation key (otherwiser the app wont run): `php artisan key:generate`
    
 
 ## Contributing

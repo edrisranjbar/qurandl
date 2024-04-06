@@ -12,15 +12,13 @@ use App\Http\Controllers\DashboardController;
 Route::get('admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
 Route::post('admin/login', [AdminAuthController::class, 'processLogin']);
 Route::middleware(['admin'])->prefix('admin')->group(function () {
-    Route::middleware(['admin'])->prefix('admin')->group(function () {
-        Route::get('profile', [AdminProfileController::class, 'show'])->name('admin.profile');
-        Route::get('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
-        Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
-        Route::resource('posts', PostController::class);
-        Route::patch('settings', [SettingController::class, 'updateAll'])->name('settings.updateAll');
-        Route::resource('settings', SettingController::class);
-        Route::resource('comments', CommentController::class);
-        Route::patch('comments/{commentId}/reply', [CommentController::class, 'reply']);
-        Route::get('comments/{commentId}/toggleApprovementStatus', [CommentController::class, 'toggleApprovementStatus']);
-    });
+    Route::get('profile', [AdminProfileController::class, 'show'])->name('admin.profile');
+    Route::get('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+    Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::resource('posts', PostController::class);
+    Route::patch('settings', [SettingController::class, 'updateAll'])->name('settings.updateAll');
+    Route::resource('settings', SettingController::class);
+    Route::resource('comments', CommentController::class);
+    Route::patch('comments/{commentId}/reply', [CommentController::class, 'reply']);
+    Route::get('comments/{commentId}/toggleApprovementStatus', [CommentController::class, 'toggleApprovementStatus']);
 });

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,7 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
     Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('posts', PostController::class);
+    Route::resource('categories', CategoryController::class);
     Route::patch('settings', [SettingController::class, 'updateAll'])->name('settings.updateAll');
     Route::resource('settings', SettingController::class);
     Route::resource('comments', CommentController::class);

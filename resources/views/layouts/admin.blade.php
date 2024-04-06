@@ -15,7 +15,6 @@
         const webBaseUrl = "{{ url('/') }}";
         const apiBaseUrl = `${webBaseUrl}/api`;
     </script>
-    @vite(['resources/js/app.js', 'resources/js/analytics-chart.js'])
     <!-- FavIcon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 @section('title', 'داشبود')
 @section('content')
     <!-- Begin Page Content -->
